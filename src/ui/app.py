@@ -1,6 +1,11 @@
 """Main Streamlit application entry point for the AI Governance Framework Helper."""
 
 import os
+import sys
+from pathlib import Path
+
+# Add project root to Python path for Streamlit Cloud deployment
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 import streamlit as st
 
