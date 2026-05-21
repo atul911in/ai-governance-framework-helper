@@ -34,16 +34,16 @@ def _generate_advice_direct(
             "next_agent": "",
             "messages": [],
         }
-        result = graph.invoke(initial_state)
+        result = graph.invoke(initial_state, config=config)
         return result.get("final_advice")
     except Exception as e:
-        st.error(f"❌ Error generating advice: {str(e)}")
+        st.error(f"âŒ Error generating advice: {str(e)}")
         return None
 
 
 def _render_risk_classifications(risk_classifications: list[dict]):
     """Render risk classification results with prominent flagging."""
-    st.subheader("⚠️ Risk Classifications")
+    st.subheader("âš ï¸ Risk Classifications")
 
     for rc in risk_classifications:
         risk_level = rc.get("risk_level", "unknown")
@@ -54,11 +54,11 @@ def _render_risk_classifications(risk_classifications: list[dict]):
 
         # Color-coded risk display
         if risk_level in ("unacceptable", "high"):
-            st.error(f"🚨 **{framework}**: {risk_level.upper()} RISK")
+            st.error(f"ðŸš¨ **{framework}**: {risk_level.upper()} RISK")
         elif risk_level == "limited":
-            st.warning(f"⚠️ **{framework}**: {risk_level.upper()} RISK")
+            st.warning(f"âš ï¸ **{framework}**: {risk_level.upper()} RISK")
         else:
-            st.success(f"✅ **{framework}**: {risk_level.upper()} RISK")
+            st.success(f"âœ… **{framework}**: {risk_level.upper()} RISK")
 
         st.markdown(f"**Explanation:** {explanation}")
 
@@ -72,14 +72,14 @@ def _render_risk_classifications(risk_classifications: list[dict]):
             if obligations:
                 st.markdown("**Regulatory Obligations:**")
                 for obligation in obligations:
-                    st.markdown(f"  - ⚡ {obligation}")
+                    st.markdown(f"  - âš¡ {obligation}")
 
         st.markdown("---")
 
 
 def _render_compliance_obligations(obligations: list[dict]):
     """Render compliance obligations organized by category tabs."""
-    st.subheader("📋 Compliance Obligations")
+    st.subheader("ðŸ“‹ Compliance Obligations")
 
     if not obligations:
         st.info("No compliance obligations generated.")
@@ -101,8 +101,8 @@ def _render_compliance_obligations(obligations: list[dict]):
             with tab:
                 for ob in cat_obligations:
                     priority = ob.get("priority", "medium")
-                    priority_icon = {"high": "🔴", "medium": "🟡", "low": "🟢"}.get(
-                        priority, "⚪"
+                    priority_icon = {"high": "ðŸ”´", "medium": "ðŸŸ¡", "low": "ðŸŸ¢"}.get(
+                        priority, "âšª"
                     )
 
                     st.markdown(f"{priority_icon} **{ob.get('obligation', '')}**")
@@ -118,7 +118,7 @@ def _render_compliance_obligations(obligations: list[dict]):
                     if docs:
                         st.markdown("**Documentation Requirements:**")
                         for doc in docs:
-                            st.markdown(f"  - 📄 {doc}")
+                            st.markdown(f"  - ðŸ“„ {doc}")
 
                     timeline = ob.get("timeline")
                     if timeline:
@@ -129,7 +129,7 @@ def _render_compliance_obligations(obligations: list[dict]):
 
 def _render_framework_comparison(comparison: dict | None):
     """Render framework comparison when multiple frameworks are selected."""
-    st.subheader("🔄 Framework Comparison")
+    st.subheader("ðŸ”„ Framework Comparison")
 
     if not comparison:
         st.info("Framework comparison is available when multiple frameworks are selected.")
@@ -142,15 +142,15 @@ def _render_framework_comparison(comparison: dict | None):
     if overlapping:
         st.markdown("**Overlapping Requirements:**")
         for req in overlapping:
-            st.markdown(f"  - ✓ {req}")
+            st.markdown(f"  - âœ“ {req}")
 
     if conflicting:
         st.markdown("**Conflicting Requirements:**")
         for conflict in conflicting:
             if isinstance(conflict, dict):
-                st.markdown(f"  - ⚡ {conflict.get('description', str(conflict))}")
+                st.markdown(f"  - âš¡ {conflict.get('description', str(conflict))}")
             else:
-                st.markdown(f"  - ⚡ {conflict}")
+                st.markdown(f"  - âš¡ {conflict}")
 
     if harmonized:
         st.markdown("**Harmonized Approach:**")
@@ -159,7 +159,7 @@ def _render_framework_comparison(comparison: dict | None):
 
 def _render_technology_recommendations(recommendations: list[dict]):
     """Render technology recommendations in categorized sections."""
-    st.subheader("💻 Technology Recommendations")
+    st.subheader("ðŸ’» Technology Recommendations")
 
     if not recommendations:
         st.info("No technology recommendations generated.")
@@ -191,14 +191,14 @@ def _render_technology_recommendations(recommendations: list[dict]):
                 with col1:
                     pros = rec.get("pros", [])
                     if pros:
-                        st.markdown("**✅ Pros:**")
+                        st.markdown("**âœ… Pros:**")
                         for pro in pros:
                             st.markdown(f"  - {pro}")
 
                 with col2:
                     cons = rec.get("cons", [])
                     if cons:
-                        st.markdown("**❌ Cons:**")
+                        st.markdown("**âŒ Cons:**")
                         for con in cons:
                             st.markdown(f"  - {con}")
 
@@ -212,22 +212,22 @@ def _render_technology_recommendations(recommendations: list[dict]):
 
                 compliance_notes = rec.get("compliance_notes", "")
                 if compliance_notes:
-                    st.info(f"📋 {compliance_notes}")
+                    st.info(f"ðŸ“‹ {compliance_notes}")
 
 
 def render():
     """Render the Results display page."""
-    st.header("📊 Results")
+    st.header("ðŸ“Š Results")
     st.markdown("View your AI governance compliance analysis results.")
     st.markdown("---")
 
     # Check prerequisites
     if not st.session_state.project_profile:
-        st.warning("⚠️ Please complete the **Project Input** step first.")
+        st.warning("âš ï¸ Please complete the **Project Input** step first.")
         return
 
     if not st.session_state.selected_frameworks:
-        st.warning("⚠️ Please select at least one framework in **Framework Selection**.")
+        st.warning("âš ï¸ Please select at least one framework in **Framework Selection**.")
         return
 
     # Detail level selector
@@ -247,7 +247,7 @@ def render():
         st.session_state.detail_level = detail_options[detail_display]
 
     with col2:
-        generate_btn = st.button("🔄 Generate Advice", use_container_width=True)
+        generate_btn = st.button("ðŸ”„ Generate Advice", use_container_width=True)
 
     st.markdown("---")
 
@@ -261,12 +261,12 @@ def render():
             )
             if result:
                 st.session_state.advice_result = result
-                st.success("✅ Advice generated successfully!")
+                st.success("âœ… Advice generated successfully!")
 
     # Display results
     advice = st.session_state.advice_result
     if not advice:
-        st.info("ℹ️ Click **Generate Advice** to run the analysis.")
+        st.info("â„¹ï¸ Click **Generate Advice** to run the analysis.")
         return
 
     # Risk Classifications
@@ -287,7 +287,7 @@ def render():
     # Industry Guidance
     industry_guidance = advice.get("industry_guidance", "")
     if industry_guidance:
-        st.subheader("🏭 Industry Guidance")
+        st.subheader("ðŸ­ Industry Guidance")
         st.markdown(industry_guidance)
 
     # Technology Recommendations
@@ -301,4 +301,4 @@ def render():
         "disclaimer",
         "This advice is informational and does not constitute legal counsel.",
     )
-    st.caption(f"⚖️ **Disclaimer:** {disclaimer}")
+    st.caption(f"âš–ï¸ **Disclaimer:** {disclaimer}")
