@@ -1,0 +1,58 @@
+{
+  "sector": "health",
+  "display_name": "Healthcare & Life Sciences",
+  "regulatory_context": "Healthcare AI faces among the most stringent regulatory requirements due to direct patient safety implications. AI systems used for diagnosis, treatment recommendations, or patient monitoring are classified as medical devices in many jurisdictions. Regulations emphasize clinical validation, patient data protection, algorithmic bias in health outcomes, and the critical importance of human oversight in clinical decision-making.",
+  "key_regulators": [
+    "US Food and Drug Administration (FDA)",
+    "European Medicines Agency (EMA)",
+    "UK Medicines and Healthcare products Regulatory Agency (MHRA)",
+    "Health Canada",
+    "Therapeutic Goods Administration (TGA, Australia)"
+  ],
+  "common_ai_use_cases": [
+    {
+      "use_case": "Clinical decision support and diagnostic assistance",
+      "risk_considerations": "High-risk as errors can directly harm patients. Requires rigorous clinical validation, ongoing performance monitoring, and clear delineation between AI suggestions and clinician decisions. Must address demographic bias in training data.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "canada_aida", "iso_42001"]
+    },
+    {
+      "use_case": "Medical imaging analysis (radiology, pathology)",
+      "risk_considerations": "High-risk classified as Software as a Medical Device (SaMD). Requires regulatory clearance, clinical trials, and post-market surveillance. Performance must be validated across diverse patient populations.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "uk_ai_regulation"]
+    },
+    {
+      "use_case": "Drug discovery and clinical trial optimization",
+      "risk_considerations": "Medium risk for research applications, higher risk when influencing patient selection or dosing. Data quality and representativeness of training populations are critical concerns.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "iso_42001"]
+    },
+    {
+      "use_case": "Patient risk stratification and resource allocation",
+      "risk_considerations": "High-risk due to potential for biased allocation of healthcare resources. Historical data may embed systemic inequities. Requires careful validation to ensure equitable outcomes across demographic groups.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "australia_ai_ethics", "canada_aida"]
+    }
+  ],
+  "best_practices": [
+    "Conduct clinical validation studies with diverse patient populations representative of the intended use population before deployment",
+    "Implement continuous performance monitoring with automated alerts for model drift or degradation in diagnostic accuracy",
+    "Maintain clear separation between AI-generated recommendations and clinical decisions, ensuring clinicians retain final authority",
+    "Establish robust data governance for patient health information with strict access controls, de-identification protocols, and compliance with HIPAA/GDPR health data provisions",
+    "Document intended use, contraindications, and known limitations of AI systems in clinical settings accessible to healthcare providers"
+  ],
+  "sector_specific_obligations": [
+    {
+      "obligation": "Obtain regulatory clearance or approval for AI systems that qualify as medical devices, including submission of clinical evidence demonstrating safety and efficacy",
+      "source": "FDA 21 CFR Part 820 / EU MDR 2017/745",
+      "category": "safety"
+    },
+    {
+      "obligation": "Implement post-market surveillance and adverse event reporting for deployed clinical AI systems, with defined processes for field safety corrective actions",
+      "source": "EU MDR Article 83 / FDA Post-Market Requirements",
+      "category": "accountability"
+    },
+    {
+      "obligation": "Ensure patient data used for AI training and inference complies with health data protection requirements including consent, purpose limitation, and data minimization",
+      "source": "HIPAA / GDPR Article 9 (Health Data) / Health Records Acts",
+      "category": "data_governance"
+    }
+  ]
+}

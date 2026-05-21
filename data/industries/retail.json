@@ -1,0 +1,58 @@
+{
+  "sector": "retail",
+  "display_name": "Retail & E-Commerce",
+  "regulatory_context": "Retail AI applications span personalization, pricing, supply chain optimization, and customer service. Regulatory concerns center on consumer protection, privacy in behavioral tracking, dynamic pricing fairness, and the use of recommendation systems that may manipulate consumer behavior. The sector faces increasing scrutiny around dark patterns and algorithmic nudging.",
+  "key_regulators": [
+    "US Federal Trade Commission (FTC)",
+    "European Commission (DG JUST - Consumer Protection)",
+    "UK Competition and Markets Authority (CMA)",
+    "Australian Competition and Consumer Commission (ACCC)",
+    "National data protection authorities (GDPR enforcement)"
+  ],
+  "common_ai_use_cases": [
+    {
+      "use_case": "Personalized recommendations and targeted advertising",
+      "risk_considerations": "Limited-to-medium risk. Concerns about filter bubbles, manipulation of vulnerable consumers, and use of sensitive personal data for profiling. GDPR automated decision-making provisions may apply.",
+      "applicable_frameworks": ["eu_ai_act", "uk_ai_regulation", "australia_ai_ethics"]
+    },
+    {
+      "use_case": "Dynamic pricing and demand forecasting",
+      "risk_considerations": "Medium risk due to potential for price discrimination based on inferred personal characteristics. Concerns about algorithmic collusion and unfair pricing of essential goods.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "uk_ai_regulation"]
+    },
+    {
+      "use_case": "Supply chain optimization and inventory management",
+      "risk_considerations": "Minimal risk for internal operations. However, AI-driven supply chain decisions affecting supplier relationships or worker scheduling may raise fairness concerns.",
+      "applicable_frameworks": ["iso_42001", "us_nist_ai_rmf"]
+    },
+    {
+      "use_case": "Customer service automation and chatbots",
+      "risk_considerations": "Limited risk with transparency obligations. Customers must be informed they are interacting with AI. Concerns about inadequate handling of complaints and accessibility for vulnerable consumers.",
+      "applicable_frameworks": ["eu_ai_act", "uk_ai_regulation", "singapore_maigf"]
+    }
+  ],
+  "best_practices": [
+    "Implement transparency mechanisms that clearly disclose when AI is used for personalization, pricing, or recommendations to consumers",
+    "Conduct regular audits of recommendation algorithms to identify and mitigate filter bubbles, manipulation patterns, or bias against consumer groups",
+    "Ensure dynamic pricing systems do not discriminate based on protected characteristics or exploit vulnerable consumers",
+    "Provide consumers with meaningful control over their data used for AI-driven personalization, including opt-out mechanisms",
+    "Design AI-powered customer service with clear escalation paths to human agents for complex issues or complaints"
+  ],
+  "sector_specific_obligations": [
+    {
+      "obligation": "Disclose to consumers when AI systems are used to personalize prices, recommendations, or search results that materially affect their purchasing decisions",
+      "source": "EU Digital Services Act / FTC Act Section 5 (Unfair Practices)",
+      "category": "transparency"
+    },
+    {
+      "obligation": "Ensure AI-driven recommendation and advertising systems do not target vulnerable consumers (minors, elderly) with manipulative or harmful content",
+      "source": "EU AI Act (Limited Risk Transparency) / Children's Online Privacy Protection Act",
+      "category": "fairness"
+    },
+    {
+      "obligation": "Maintain records of AI system logic and data inputs for consumer-facing automated decisions to enable regulatory investigation of unfair commercial practices",
+      "source": "Consumer Rights Directive / FTC Algorithmic Accountability",
+      "category": "accountability"
+    }
+  ]
+}

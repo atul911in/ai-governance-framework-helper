@@ -1,0 +1,141 @@
+[
+  {
+    "category": "orchestration_framework",
+    "name": "LangGraph",
+    "provider": "LangChain Inc.",
+    "description": "A library for building stateful, multi-actor applications with LLMs, built on top of LangChain. Provides native support for cyclic graphs, conditional routing, persistent state, and human-in-the-loop workflows.",
+    "key_capabilities": [
+      "Stateful graph-based agent orchestration",
+      "Cyclic and conditional workflow support",
+      "Built-in persistence and checkpointing",
+      "Human-in-the-loop interaction patterns",
+      "Parallel node execution",
+      "Streaming support for real-time output",
+      "Native integration with LangChain tools and models"
+    ],
+    "pros": [
+      "Purpose-built for complex multi-agent workflows with cycles and conditional logic",
+      "First-class state management with TypedDict state schemas",
+      "Excellent debugging and visualization tools (LangSmith integration)",
+      "Active development with frequent updates and strong community",
+      "Supports both sync and async execution patterns"
+    ],
+    "cons": [
+      "Relatively new library with evolving API surface",
+      "Tight coupling to LangChain ecosystem may limit flexibility",
+      "Learning curve for graph-based programming paradigm",
+      "Limited production deployment tooling compared to cloud-native solutions"
+    ],
+    "compliance_notes": "LangGraph itself does not handle compliance directly but supports building compliant workflows through state-based audit trails, human-in-the-loop checkpoints, and integration with observability platforms like LangSmith for tracing and monitoring.",
+    "context_window": null,
+    "cost_per_token": null,
+    "supported_regions": null
+  },
+  {
+    "category": "orchestration_framework",
+    "name": "LangChain",
+    "provider": "LangChain Inc.",
+    "description": "A framework for developing applications powered by language models. Provides abstractions for chains, agents, memory, and tool use, with integrations across major LLM providers and vector stores.",
+    "key_capabilities": [
+      "Chain composition for sequential LLM workflows",
+      "Agent framework with tool-use capabilities",
+      "Memory management (conversation, summary, buffer)",
+      "Document loading and text splitting utilities",
+      "Vector store integrations for RAG patterns",
+      "Output parsing and structured generation",
+      "Multi-provider model abstraction layer"
+    ],
+    "pros": [
+      "Largest ecosystem of integrations (150+ LLM providers, vector stores, tools)",
+      "Well-documented with extensive examples and tutorials",
+      "Flexible abstraction layer supports rapid prototyping",
+      "Strong community and active development",
+      "LangSmith provides production observability and evaluation"
+    ],
+    "cons": [
+      "Abstraction overhead can make debugging difficult",
+      "Frequent breaking changes between versions",
+      "Chain-based paradigm less suited for complex cyclic workflows",
+      "Performance overhead from abstraction layers in latency-sensitive applications",
+      "Some integrations are community-maintained with varying quality"
+    ],
+    "compliance_notes": "LangChain supports compliance through callback handlers for logging, LangSmith for tracing and audit trails, and configurable retry/fallback mechanisms. Does not provide built-in data residency controls; these must be configured at the model provider level.",
+    "context_window": null,
+    "cost_per_token": null,
+    "supported_regions": null
+  },
+  {
+    "category": "orchestration_framework",
+    "name": "Semantic Kernel",
+    "provider": "Microsoft",
+    "description": "An open-source SDK from Microsoft for integrating LLMs into applications. Supports C#, Python, and Java with native Azure OpenAI integration and enterprise-grade plugin architecture.",
+    "key_capabilities": [
+      "Plugin-based architecture for modular AI capabilities",
+      "Native Azure OpenAI and OpenAI integration",
+      "Planner for automatic function orchestration",
+      "Memory and embedding management",
+      "Prompt template engine with semantic functions",
+      "Multi-language support (C#, Python, Java)",
+      "Enterprise patterns for dependency injection and configuration"
+    ],
+    "pros": [
+      "Deep integration with Microsoft and Azure ecosystem",
+      "Enterprise-ready with familiar .NET patterns and dependency injection",
+      "Strong typing and plugin architecture promotes maintainable code",
+      "Active Microsoft backing ensures long-term support",
+      "Good fit for organizations already invested in Microsoft stack"
+    ],
+    "cons": [
+      "Python SDK less mature than C# counterpart",
+      "Smaller community compared to LangChain ecosystem",
+      "Planner capabilities still evolving and can be unpredictable",
+      "Fewer third-party integrations outside Microsoft ecosystem",
+      "Documentation gaps for advanced scenarios"
+    ],
+    "compliance_notes": "Semantic Kernel inherits compliance capabilities from Azure OpenAI Service when used together, including data privacy, content filtering, and abuse monitoring. Supports enterprise authentication via Microsoft Entra ID and integrates with Azure governance tools.",
+    "context_window": null,
+    "cost_per_token": null,
+    "supported_regions": null
+  },
+  {
+    "category": "orchestration_framework",
+    "name": "Amazon Bedrock Agents",
+    "provider": "Amazon",
+    "description": "A fully managed service for building AI agents that can reason, plan, and execute multi-step tasks using foundation models. Integrates natively with AWS services for action execution and knowledge base retrieval.",
+    "key_capabilities": [
+      "Managed agent runtime with automatic reasoning and planning",
+      "Action groups for integrating with AWS Lambda and APIs",
+      "Knowledge base integration with RAG capabilities",
+      "Guardrails for content filtering and topic control",
+      "Session management for multi-turn conversations",
+      "Native integration with AWS services (S3, DynamoDB, Lambda)",
+      "Model selection across multiple foundation model providers"
+    ],
+    "pros": [
+      "Fully managed service eliminates infrastructure management overhead",
+      "Native AWS integration simplifies enterprise deployment",
+      "Built-in guardrails provide content safety and compliance controls",
+      "Supports multiple foundation models (Claude, Llama, Titan, etc.)",
+      "Pay-per-use pricing with no upfront commitments",
+      "Data never leaves AWS account boundary"
+    ],
+    "cons": [
+      "Limited to AWS ecosystem and regions where Bedrock is available",
+      "Less flexibility for custom orchestration patterns compared to code-first frameworks",
+      "Agent behavior can be opaque and difficult to debug",
+      "Newer service with fewer production case studies",
+      "Action group configuration can be complex for non-trivial workflows"
+    ],
+    "compliance_notes": "Bedrock Agents inherits AWS compliance certifications. Data processed by Bedrock is not used to train models and does not leave the customer's AWS account. Supports VPC endpoints for private connectivity, AWS PrivateLink, and encryption at rest and in transit. Guardrails provide configurable content filtering aligned with responsible AI principles.",
+    "context_window": null,
+    "cost_per_token": null,
+    "supported_regions": [
+      "us-east-1",
+      "us-west-2",
+      "eu-west-1",
+      "eu-central-1",
+      "ap-southeast-1",
+      "ap-northeast-1"
+    ]
+  }
+]

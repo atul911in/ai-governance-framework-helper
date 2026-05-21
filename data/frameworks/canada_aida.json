@@ -1,0 +1,95 @@
+{
+  "framework_id": "canada_aida",
+  "display_name": "Canada Artificial Intelligence and Data Act (AIDA)",
+  "country_or_region": "Canada",
+  "summary": "The Artificial Intelligence and Data Act (AIDA) is Part 3 of Canada's Bill C-27 (Digital Charter Implementation Act). It establishes requirements for the responsible design, development, and deployment of AI systems, with particular focus on high-impact systems that may cause significant harm to individuals or their interests.",
+  "source_url": "https://www.parl.ca/legisinfo/en/bill/44-1/c-27",
+  "last_updated": "2024-03-20T00:00:00",
+  "version": "1.0",
+  "risk_tiers": [
+    {
+      "tier_name": "High-Impact AI System",
+      "risk_level": "high",
+      "description": "AI systems that meet criteria prescribed by regulation for high-impact designation. These systems are subject to the full set of AIDA obligations including assessments, mitigation measures, and transparency requirements.",
+      "criteria": [
+        "AI system used in decisions related to employment, including recruitment and termination",
+        "AI system determining access to financial services, credit, or insurance",
+        "AI system used in healthcare diagnosis, treatment, or prioritization",
+        "AI system used in law enforcement, criminal justice, or immigration decisions",
+        "AI system that may affect individuals' fundamental rights",
+        "AI system used for biometric identification or profiling",
+        "AI system managing critical infrastructure operations"
+      ]
+    },
+    {
+      "tier_name": "General AI System",
+      "risk_level": "limited",
+      "description": "AI systems that do not meet high-impact criteria but are still subject to general obligations including record-keeping and prohibition on reckless or malicious use.",
+      "criteria": [
+        "AI systems used in commercial operations not meeting high-impact thresholds",
+        "Customer-facing AI systems with moderate individual impact",
+        "AI systems used for content generation or recommendation",
+        "Internal decision-support tools with human oversight"
+      ]
+    },
+    {
+      "tier_name": "Minimal Impact AI System",
+      "risk_level": "minimal",
+      "description": "AI systems with negligible potential for harm to individuals. Subject only to the general prohibition on harmful or deceptive use.",
+      "criteria": [
+        "AI systems used purely for internal analytics",
+        "Low-stakes automation with no individual impact",
+        "Research and development systems not deployed publicly",
+        "AI-assisted tools with full human control over outputs"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Assess whether an AI system is a high-impact system and document the assessment, including potential harms and mitigation measures",
+      "article_reference": "Section 7 - Assessment",
+      "applies_to_risk_levels": ["high"],
+      "category": "safety"
+    },
+    {
+      "obligation": "Establish measures to identify, assess, and mitigate risks of harm or biased output that could result from the use of the AI system",
+      "article_reference": "Section 8 - Mitigation Measures",
+      "applies_to_risk_levels": ["high"],
+      "category": "fairness"
+    },
+    {
+      "obligation": "Monitor compliance with mitigation measures and assess their effectiveness on an ongoing basis throughout the system lifecycle",
+      "article_reference": "Section 9 - Monitoring",
+      "applies_to_risk_levels": ["high"],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Publish a plain-language description of the AI system explaining how it is used, the types of decisions it makes, and mitigation measures in place",
+      "article_reference": "Section 11 - Transparency",
+      "applies_to_risk_levels": ["high"],
+      "category": "transparency"
+    },
+    {
+      "obligation": "Maintain records of assessments, mitigation measures, and any incidents or adverse outcomes for prescribed retention periods",
+      "article_reference": "Section 12 - Record Keeping",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Notify the AI and Data Commissioner of material harm or risk of imminent material harm resulting from the AI system",
+      "article_reference": "Section 12.1 - Notification",
+      "applies_to_risk_levels": ["high"],
+      "category": "safety"
+    }
+  ],
+  "data_residency_requirements": [
+    "Canada (PIPEDA and provincial privacy laws apply)",
+    "Jurisdictions with adequate privacy protections"
+  ],
+  "enforcement_timeline": "Bill C-27 introduced June 2022. AIDA is Part 3 of the bill. As of 2024, the bill remains under parliamentary consideration. Regulations to define high-impact criteria will follow royal assent.",
+  "recent_changes": [
+    "Companion document published with proposed high-impact system criteria",
+    "AI and Data Commissioner role proposed for enforcement oversight",
+    "Amendments proposed to strengthen individual rights and transparency requirements"
+  ]
+}

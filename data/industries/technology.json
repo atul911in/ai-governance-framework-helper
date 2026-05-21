@@ -1,0 +1,58 @@
+{
+  "sector": "technology",
+  "display_name": "Technology & Software",
+  "regulatory_context": "Technology companies developing and deploying AI systems face dual regulatory pressure: as providers of AI systems subject to provider obligations, and as deployers using AI in their own operations. The sector is subject to platform regulation, content moderation requirements, and increasing obligations around general-purpose AI models and foundation models. Open-source considerations and supply chain transparency add complexity.",
+  "key_regulators": [
+    "European Commission (AI Office)",
+    "US National Institute of Standards and Technology (NIST)",
+    "UK Office for AI / DSIT",
+    "Singapore Infocomm Media Development Authority (IMDA)",
+    "US Federal Trade Commission (FTC)"
+  ],
+  "common_ai_use_cases": [
+    {
+      "use_case": "General-purpose AI and foundation model development",
+      "risk_considerations": "Systemic risk for large-scale models. Obligations around model documentation, safety testing, adversarial robustness, and downstream use monitoring. EU AI Act imposes specific requirements on GPAI providers.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "uk_ai_regulation", "iso_42001"]
+    },
+    {
+      "use_case": "Content moderation and recommendation systems",
+      "risk_considerations": "Medium-to-high risk due to impact on freedom of expression, potential for bias in moderation decisions, and amplification of harmful content. Platform accountability regulations apply.",
+      "applicable_frameworks": ["eu_ai_act", "uk_ai_regulation", "australia_ai_ethics"]
+    },
+    {
+      "use_case": "Automated code generation and software development tools",
+      "risk_considerations": "Limited risk for developer tools, but concerns about intellectual property, security vulnerabilities in generated code, and accountability for AI-assisted software defects.",
+      "applicable_frameworks": ["us_nist_ai_rmf", "iso_42001"]
+    },
+    {
+      "use_case": "AI-powered cybersecurity and threat detection",
+      "risk_considerations": "Medium risk. False positives may disrupt legitimate activities. Adversarial attacks on security AI could create vulnerabilities. Dual-use concerns for offensive capabilities.",
+      "applicable_frameworks": ["us_nist_ai_rmf", "uk_ai_regulation", "iso_42001"]
+    }
+  ],
+  "best_practices": [
+    "Implement responsible AI development practices including red-teaming, safety evaluations, and bias testing before model release",
+    "Maintain comprehensive model cards and system documentation covering training data, capabilities, limitations, and known failure modes",
+    "Establish clear terms of use and acceptable use policies for AI systems provided to downstream developers and deployers",
+    "Implement robust monitoring for misuse, emergent capabilities, and unintended behaviors in deployed AI systems",
+    "Participate in industry standards development and voluntary commitments for AI safety and transparency"
+  ],
+  "sector_specific_obligations": [
+    {
+      "obligation": "Providers of general-purpose AI models must maintain up-to-date technical documentation, provide information to downstream providers, and comply with copyright law obligations",
+      "source": "EU AI Act Articles 53-55 (GPAI Provisions)",
+      "category": "transparency"
+    },
+    {
+      "obligation": "Conduct and publish results of adversarial testing and red-teaming for AI systems with systemic risk, including assessment of potential for misuse",
+      "source": "EU AI Act Article 55 / NIST AI RMF GOVERN function",
+      "category": "safety"
+    },
+    {
+      "obligation": "Implement incident reporting mechanisms for serious incidents involving AI systems, with notification to relevant authorities within prescribed timeframes",
+      "source": "EU AI Act Article 73 / NIST AI RMF",
+      "category": "accountability"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "sector": "telecommunications",
+  "display_name": "Telecommunications",
+  "regulatory_context": "Telecommunications companies use AI for network optimization, customer management, fraud prevention, and content delivery. The sector faces regulation around network neutrality, lawful interception, data retention, and the critical infrastructure nature of communications networks. AI-driven network management decisions must balance efficiency with non-discrimination and universal service obligations.",
+  "key_regulators": [
+    "European Commission (DG CNECT) / BEREC",
+    "US Federal Communications Commission (FCC)",
+    "UK Office of Communications (Ofcom)",
+    "International Telecommunication Union (ITU)",
+    "National telecommunications regulators"
+  ],
+  "common_ai_use_cases": [
+    {
+      "use_case": "Network optimization and traffic management",
+      "risk_considerations": "Medium risk. AI-driven traffic management must comply with net neutrality principles and avoid discriminatory treatment of content or services. Critical infrastructure reliability concerns apply.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "iso_42001"]
+    },
+    {
+      "use_case": "Customer churn prediction and retention",
+      "risk_considerations": "Limited risk for internal analytics. However, differential treatment of customers based on AI predictions may raise fairness concerns, particularly if correlated with protected characteristics.",
+      "applicable_frameworks": ["eu_ai_act", "uk_ai_regulation", "singapore_maigf"]
+    },
+    {
+      "use_case": "Fraud detection and SIM swap prevention",
+      "risk_considerations": "Medium risk. False positives may lock legitimate customers out of essential communication services. Must balance security with service continuity and provide rapid resolution mechanisms.",
+      "applicable_frameworks": ["us_nist_ai_rmf", "eu_ai_act", "iso_42001"]
+    },
+    {
+      "use_case": "Automated customer service and network diagnostics",
+      "risk_considerations": "Limited risk with transparency obligations. Customers must be informed of AI interaction. Concerns about accessibility for elderly or disabled users and adequate escalation to human support.",
+      "applicable_frameworks": ["eu_ai_act", "uk_ai_regulation", "australia_ai_ethics"]
+    }
+  ],
+  "best_practices": [
+    "Ensure AI-driven network management decisions comply with net neutrality requirements and do not discriminate between content providers or user groups",
+    "Implement robust security measures for AI systems managing critical communications infrastructure, including adversarial robustness testing",
+    "Maintain transparency about AI use in customer interactions and provide accessible alternatives for customers who cannot or prefer not to interact with AI systems",
+    "Conduct regular audits of AI-driven customer segmentation and pricing to ensure compliance with non-discrimination and universal service obligations",
+    "Implement privacy-preserving approaches for network analytics that minimize processing of communications content and metadata"
+  ],
+  "sector_specific_obligations": [
+    {
+      "obligation": "Ensure AI-driven traffic management and network optimization does not violate net neutrality principles by discriminating between content, applications, or services without objective justification",
+      "source": "EU Open Internet Regulation 2015/2120 / FCC Net Neutrality Rules",
+      "category": "fairness"
+    },
+    {
+      "obligation": "Implement appropriate security measures for AI systems managing critical telecommunications infrastructure, with incident reporting to national authorities",
+      "source": "EU NIS2 Directive / Telecommunications Security Act / Critical Infrastructure Protection",
+      "category": "safety"
+    },
+    {
+      "obligation": "Ensure AI processing of communications data complies with data retention limitations and purpose restrictions, with appropriate safeguards for metadata analysis",
+      "source": "ePrivacy Directive / Telecommunications Data Protection Regulations",
+      "category": "data_governance"
+    }
+  ]
+}

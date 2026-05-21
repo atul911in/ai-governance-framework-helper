@@ -1,0 +1,120 @@
+{
+  "framework_id": "eu_ai_act",
+  "display_name": "EU AI Act",
+  "country_or_region": "European Union",
+  "summary": "The EU AI Act is the world's first comprehensive legal framework for artificial intelligence, establishing a risk-based approach to AI regulation across the European Union. It classifies AI systems into four risk tiers and imposes obligations proportional to the level of risk posed.",
+  "source_url": "https://artificialintelligenceact.eu/",
+  "last_updated": "2024-08-01T00:00:00",
+  "version": "1.0",
+  "risk_tiers": [
+    {
+      "tier_name": "Unacceptable Risk",
+      "risk_level": "unacceptable",
+      "description": "AI systems that pose a clear threat to safety, livelihoods, or fundamental rights of persons. These systems are prohibited from being placed on the market or put into service in the EU.",
+      "criteria": [
+        "Social scoring by public authorities leading to detrimental treatment",
+        "Real-time remote biometric identification in publicly accessible spaces for law enforcement (with limited exceptions)",
+        "Exploitation of vulnerabilities of specific groups (age, disability, social situation)",
+        "Subliminal manipulation techniques causing physical or psychological harm",
+        "Emotion recognition in workplace and educational institutions",
+        "Untargeted scraping of facial images from internet or CCTV for facial recognition databases"
+      ]
+    },
+    {
+      "tier_name": "High Risk",
+      "risk_level": "high",
+      "description": "AI systems that pose significant risks to health, safety, or fundamental rights. Subject to strict requirements including conformity assessments, risk management, and human oversight before market placement.",
+      "criteria": [
+        "Biometric identification and categorisation of natural persons",
+        "Management and operation of critical infrastructure (energy, transport, water)",
+        "Education and vocational training (determining access or assessing students)",
+        "Employment, worker management, and access to self-employment (recruitment, promotion, termination decisions)",
+        "Access to essential private and public services (credit scoring, insurance pricing)",
+        "Law enforcement (individual risk assessments, polygraphs, evidence evaluation)",
+        "Migration, asylum, and border control management",
+        "Administration of justice and democratic processes"
+      ]
+    },
+    {
+      "tier_name": "Limited Risk",
+      "risk_level": "limited",
+      "description": "AI systems with specific transparency obligations. Users must be informed they are interacting with an AI system, and certain content must be labeled as AI-generated.",
+      "criteria": [
+        "AI systems intended to interact directly with natural persons (chatbots)",
+        "AI systems generating synthetic audio, image, video, or text content (deepfakes)",
+        "Emotion recognition systems (outside prohibited contexts)",
+        "Biometric categorisation systems (outside high-risk contexts)"
+      ]
+    },
+    {
+      "tier_name": "Minimal Risk",
+      "risk_level": "minimal",
+      "description": "AI systems posing minimal or no risk to rights or safety. No mandatory requirements beyond existing legislation, though voluntary codes of conduct are encouraged.",
+      "criteria": [
+        "AI-enabled video games",
+        "Spam filters",
+        "Inventory management systems",
+        "AI systems not falling into higher risk categories"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Establish and maintain a risk management system throughout the AI system lifecycle, including identification, analysis, and mitigation of known and foreseeable risks",
+      "article_reference": "Article 9",
+      "applies_to_risk_levels": ["high"],
+      "category": "safety"
+    },
+    {
+      "obligation": "Implement data governance practices ensuring training, validation, and testing datasets are relevant, representative, free of errors, and complete",
+      "article_reference": "Article 10",
+      "applies_to_risk_levels": ["high"],
+      "category": "data_governance"
+    },
+    {
+      "obligation": "Draw up technical documentation demonstrating compliance before the system is placed on the market or put into service",
+      "article_reference": "Article 11",
+      "applies_to_risk_levels": ["high"],
+      "category": "transparency"
+    },
+    {
+      "obligation": "Design AI systems to enable automatic recording of events (logs) for traceability throughout the system lifecycle",
+      "article_reference": "Article 12",
+      "applies_to_risk_levels": ["high"],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Ensure transparency and provision of information to deployers, including clear instructions for use, intended purpose, and known limitations",
+      "article_reference": "Article 13",
+      "applies_to_risk_levels": ["high"],
+      "category": "transparency"
+    },
+    {
+      "obligation": "Design high-risk AI systems to allow effective human oversight, including the ability to understand, monitor, and override the system",
+      "article_reference": "Article 14",
+      "applies_to_risk_levels": ["high"],
+      "category": "human_oversight"
+    },
+    {
+      "obligation": "Achieve appropriate levels of accuracy, robustness, and cybersecurity throughout the system lifecycle",
+      "article_reference": "Article 15",
+      "applies_to_risk_levels": ["high"],
+      "category": "safety"
+    },
+    {
+      "obligation": "Inform natural persons that they are interacting with an AI system unless obvious from the circumstances",
+      "article_reference": "Article 50",
+      "applies_to_risk_levels": ["limited"],
+      "category": "transparency"
+    }
+  ],
+  "data_residency_requirements": [
+    "EU/EEA"
+  ],
+  "enforcement_timeline": "Entered into force August 1, 2024. Prohibited practices apply from February 2, 2025. High-risk obligations apply from August 2, 2026. Full application by August 2, 2027.",
+  "recent_changes": [
+    "Regulation (EU) 2024/1689 published in Official Journal on July 12, 2024",
+    "AI Office established within the European Commission to oversee implementation",
+    "General-purpose AI model provisions added covering foundation models and systemic risk"
+  ]
+}

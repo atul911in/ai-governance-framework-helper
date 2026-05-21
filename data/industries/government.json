@@ -1,0 +1,58 @@
+{
+  "sector": "government",
+  "display_name": "Government & Public Sector",
+  "regulatory_context": "Government use of AI carries heightened scrutiny due to the power asymmetry between state and citizens, the impact on fundamental rights, and the requirement for democratic accountability. AI in public administration must meet higher standards of transparency, fairness, and due process. Many jurisdictions impose additional requirements on public sector AI beyond those applicable to private sector use.",
+  "key_regulators": [
+    "National AI strategy bodies and offices",
+    "Government accountability offices (GAO, NAO)",
+    "Data protection authorities",
+    "Administrative law courts and ombudsmen",
+    "Parliamentary oversight committees"
+  ],
+  "common_ai_use_cases": [
+    {
+      "use_case": "Benefits eligibility determination and social services allocation",
+      "risk_considerations": "High-risk due to direct impact on vulnerable populations' access to essential services. Historical bias in training data may perpetuate systemic inequities. Requires robust appeals mechanisms and human oversight.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "canada_aida", "uk_ai_regulation"]
+    },
+    {
+      "use_case": "Predictive policing and public safety",
+      "risk_considerations": "High-to-unacceptable risk. Potential for reinforcing discriminatory policing patterns, disproportionate surveillance of minority communities, and erosion of civil liberties. Some applications may be prohibited under EU AI Act.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "uk_ai_regulation", "canada_aida"]
+    },
+    {
+      "use_case": "Document processing and administrative automation",
+      "risk_considerations": "Limited-to-medium risk for routine processing. Higher risk when automated decisions affect citizens' rights or entitlements. Must ensure accessibility and accommodate citizens who cannot interact with AI systems.",
+      "applicable_frameworks": ["eu_ai_act", "iso_42001", "australia_ai_ethics"]
+    },
+    {
+      "use_case": "Immigration and border control systems",
+      "risk_considerations": "High-risk under EU AI Act Annex III. Biometric identification, risk profiling, and automated decision-making in migration contexts raise serious fundamental rights concerns.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "canada_aida", "uk_ai_regulation"]
+    }
+  ],
+  "best_practices": [
+    "Publish algorithmic impact assessments for all AI systems used in public decision-making, with opportunity for public comment before deployment",
+    "Ensure all citizens affected by AI-assisted government decisions have access to meaningful human review and administrative appeals",
+    "Implement procurement standards that require AI vendors to demonstrate compliance with fairness, transparency, and accountability requirements",
+    "Conduct equity audits to verify AI systems do not disproportionately impact marginalized communities or perpetuate historical discrimination",
+    "Maintain public registries of AI systems used in government decision-making, including purpose, scope, and performance metrics"
+  ],
+  "sector_specific_obligations": [
+    {
+      "obligation": "Conduct and publish algorithmic impact assessments before deploying AI systems that affect citizens' rights, benefits, or legal status",
+      "source": "Canada AIDA / EU AI Act (Public Sector Provisions) / US Executive Order 14110",
+      "category": "accountability"
+    },
+    {
+      "obligation": "Ensure citizens have the right to human review of automated administrative decisions and provide clear information about how to exercise this right",
+      "source": "Administrative Procedure Acts / GDPR Article 22 / EU AI Act Article 86",
+      "category": "human_oversight"
+    },
+    {
+      "obligation": "Prohibit or restrict use of AI for social scoring, mass surveillance, or real-time biometric identification in public spaces except under strictly defined legal exceptions",
+      "source": "EU AI Act Article 5 / National constitutional protections",
+      "category": "fairness"
+    }
+  ]
+}

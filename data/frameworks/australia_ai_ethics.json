@@ -1,0 +1,141 @@
+{
+  "framework_id": "australia_ai_ethics",
+  "display_name": "Australia AI Ethics Framework",
+  "country_or_region": "Australia",
+  "summary": "Australia's AI Ethics Framework establishes eight voluntary AI Ethics Principles to guide businesses and governments in the responsible design, development, and implementation of AI. The framework emphasizes a human-centric approach and aims to build public trust in AI technologies.",
+  "source_url": "https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-framework",
+  "last_updated": "2024-06-01T00:00:00",
+  "version": "1.0",
+  "risk_tiers": [
+    {
+      "tier_name": "Human, Societal and Environmental Wellbeing",
+      "risk_level": "limited",
+      "description": "AI systems should benefit individuals, society, and the environment. Outcomes should be assessed for broad societal impact including sustainability and environmental considerations.",
+      "criteria": [
+        "AI system has potential environmental impact (energy consumption, resource use)",
+        "System outcomes affect community wellbeing or social cohesion",
+        "AI deployment may displace workers or affect livelihoods",
+        "System operates in public interest domains (health, education, environment)"
+      ]
+    },
+    {
+      "tier_name": "Human-Centred Values",
+      "risk_level": "limited",
+      "description": "AI systems should respect human rights, diversity, and the autonomy of individuals. Systems should be designed to augment rather than replace human decision-making in consequential contexts.",
+      "criteria": [
+        "System processes personal or sensitive information",
+        "AI affects individual autonomy or freedom of choice",
+        "System may impact human dignity or rights",
+        "AI operates in contexts involving vulnerable populations"
+      ]
+    },
+    {
+      "tier_name": "Fairness",
+      "risk_level": "limited",
+      "description": "AI systems should be inclusive and accessible, and should not involve or result in unfair discrimination against individuals, communities, or groups. Proactive measures should address potential bias.",
+      "criteria": [
+        "System makes decisions affecting access to services or opportunities",
+        "Training data may contain historical biases",
+        "AI outcomes differ across demographic groups",
+        "System operates in contexts with existing inequality"
+      ]
+    },
+    {
+      "tier_name": "Privacy Protection and Security",
+      "risk_level": "limited",
+      "description": "AI systems should respect and uphold privacy rights and data protection. Systems should be secure and robust against adversarial attacks, with appropriate data governance throughout the lifecycle.",
+      "criteria": [
+        "System collects, stores, or processes personal information",
+        "AI requires access to sensitive or confidential data",
+        "System is exposed to potential adversarial manipulation",
+        "Data sharing or transfer across jurisdictions is involved"
+      ]
+    },
+    {
+      "tier_name": "Reliability and Safety",
+      "risk_level": "limited",
+      "description": "AI systems should reliably operate in accordance with their intended purpose throughout their lifecycle. Systems should be safe, with appropriate fail-safes and human oversight mechanisms.",
+      "criteria": [
+        "System operates in safety-critical environments",
+        "AI failure could result in physical or financial harm",
+        "System requires high availability and consistent performance",
+        "Autonomous operation without continuous human monitoring"
+      ]
+    },
+    {
+      "tier_name": "Transparency and Explainability",
+      "risk_level": "limited",
+      "description": "There should be transparency and responsible disclosure to ensure people know when they are being significantly impacted by AI, and can find out when AI is being used. Explanations should be meaningful and appropriate to context.",
+      "criteria": [
+        "AI system interacts directly with individuals",
+        "System makes or influences significant decisions",
+        "Stakeholders need to understand basis of AI outputs",
+        "Regulatory or audit requirements for decision transparency"
+      ]
+    },
+    {
+      "tier_name": "Contestability",
+      "risk_level": "limited",
+      "description": "When AI systems significantly impact a person, community, group, or environment, there should be a timely process to allow people to challenge the use or outcomes of the AI system.",
+      "criteria": [
+        "AI decisions significantly affect individuals' rights or interests",
+        "System outcomes may be contested or appealed",
+        "Automated decisions replace human judgment in consequential matters",
+        "Affected parties have limited alternative recourse"
+      ]
+    },
+    {
+      "tier_name": "Accountability",
+      "risk_level": "limited",
+      "description": "People responsible for the different phases of the AI system lifecycle should be identifiable and accountable for the outcomes of the AI systems, with appropriate human oversight throughout.",
+      "criteria": [
+        "Multiple parties involved in AI system development and deployment",
+        "Clear responsibility assignment needed for AI outcomes",
+        "Regulatory compliance requires audit trails",
+        "System operates with significant autonomy requiring oversight"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Conduct impact assessments to identify and evaluate potential harms to individuals, communities, and the environment before deploying AI systems",
+      "article_reference": "Principle 1 - Human, Societal and Environmental Wellbeing",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "safety"
+    },
+    {
+      "obligation": "Implement measures to ensure AI systems respect human rights, diversity, individual autonomy, and do not undermine human decision-making in consequential contexts",
+      "article_reference": "Principle 2 - Human-Centred Values",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "fairness"
+    },
+    {
+      "obligation": "Test and monitor AI systems for bias and discrimination, implementing corrective measures to ensure inclusive and equitable outcomes across diverse populations",
+      "article_reference": "Principle 3 - Fairness",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "fairness"
+    },
+    {
+      "obligation": "Implement robust data governance, privacy protections compliant with the Privacy Act 1988, and security measures to protect against unauthorized access and adversarial attacks",
+      "article_reference": "Principle 4 - Privacy Protection and Security",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "data_governance"
+    },
+    {
+      "obligation": "Provide meaningful transparency about AI use and enable affected individuals to understand, challenge, and seek redress for AI-driven decisions that significantly impact them",
+      "article_reference": "Principles 6-7 - Transparency, Explainability, and Contestability",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "transparency"
+    }
+  ],
+  "data_residency_requirements": [
+    "Australia (Privacy Act 1988 applies)",
+    "Jurisdictions with substantially similar privacy protections (APP 8)"
+  ],
+  "enforcement_timeline": "Voluntary framework published November 2019. Government consulting on mandatory guardrails for high-risk AI settings. Safe and Responsible AI consultation completed in 2024.",
+  "recent_changes": [
+    "Government response to Safe and Responsible AI consultation published 2024",
+    "Mandatory guardrails for high-risk AI proposed for consultation",
+    "Voluntary AI Safety Standard under development aligned with international standards"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "sector": "manufacturing",
+  "display_name": "Manufacturing & Industrial",
+  "regulatory_context": "AI in manufacturing primarily involves safety-critical applications in industrial automation, quality control, predictive maintenance, and supply chain management. Regulatory focus is on worker safety, product safety, and the interaction between AI systems and existing machinery safety standards. The sector must navigate the intersection of AI regulation with established industrial safety frameworks such as the Machinery Regulation.",
+  "key_regulators": [
+    "European Commission (DG GROW - Industrial Policy)",
+    "US Occupational Safety and Health Administration (OSHA)",
+    "UK Health and Safety Executive (HSE)",
+    "International Organization for Standardization (ISO)",
+    "National product safety authorities"
+  ],
+  "common_ai_use_cases": [
+    {
+      "use_case": "Predictive maintenance and equipment monitoring",
+      "risk_considerations": "Medium risk. Failure to predict equipment failures can lead to safety incidents. Over-reliance on AI predictions without human verification may create complacency. Data quality from sensors is critical.",
+      "applicable_frameworks": ["iso_42001", "us_nist_ai_rmf", "eu_ai_act"]
+    },
+    {
+      "use_case": "Quality control and defect detection",
+      "risk_considerations": "Medium-to-high risk depending on product safety implications. AI-driven quality decisions for safety-critical components (automotive, aerospace, medical devices) require rigorous validation and traceability.",
+      "applicable_frameworks": ["eu_ai_act", "iso_42001", "us_nist_ai_rmf"]
+    },
+    {
+      "use_case": "Autonomous robotics and human-robot collaboration",
+      "risk_considerations": "High-risk due to direct physical safety implications for workers. Must comply with machinery safety standards and ensure safe human-robot interaction. Requires robust fail-safe mechanisms.",
+      "applicable_frameworks": ["eu_ai_act", "iso_42001", "uk_ai_regulation"]
+    },
+    {
+      "use_case": "Supply chain optimization and demand planning",
+      "risk_considerations": "Limited risk for internal optimization. However, AI-driven decisions affecting supplier relationships, workforce scheduling, or resource allocation may raise fairness and transparency concerns.",
+      "applicable_frameworks": ["iso_42001", "us_nist_ai_rmf"]
+    }
+  ],
+  "best_practices": [
+    "Integrate AI safety requirements with existing machinery safety standards (ISO 12100, IEC 62443) and conduct combined risk assessments",
+    "Implement redundant safety systems that do not rely solely on AI for safety-critical decisions in industrial environments",
+    "Maintain comprehensive traceability of AI-driven quality decisions for safety-critical components throughout the product lifecycle",
+    "Conduct regular validation of AI systems against physical process changes, equipment degradation, and environmental variations",
+    "Ensure workers interacting with AI-driven automation receive appropriate training and have clear procedures for overriding automated systems"
+  ],
+  "sector_specific_obligations": [
+    {
+      "obligation": "Ensure AI systems integrated into machinery comply with essential health and safety requirements, including fail-safe design and emergency stop capabilities",
+      "source": "EU Machinery Regulation 2023/1230 / ISO 12100 / OSHA Standards",
+      "category": "safety"
+    },
+    {
+      "obligation": "Maintain complete traceability and documentation for AI-driven quality decisions on safety-critical components, enabling root cause analysis in case of product failures",
+      "source": "ISO 9001 / Product Liability Directive / Industry-specific safety standards",
+      "category": "accountability"
+    },
+    {
+      "obligation": "Conduct risk assessments for AI systems that interact with workers in shared spaces, ensuring compliance with occupational health and safety requirements",
+      "source": "EU Framework Directive 89/391/EEC / ISO 10218 (Robot Safety) / OSHA",
+      "category": "human_oversight"
+    }
+  ]
+}

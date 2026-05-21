@@ -1,0 +1,98 @@
+{
+  "framework_id": "singapore_maigf",
+  "display_name": "Singapore Model AI Governance Framework",
+  "country_or_region": "Singapore",
+  "summary": "The Model AI Governance Framework (MAIGF) provides detailed guidance on implementing responsible AI practices. Published by the Personal Data Protection Commission (PDPC) and IMDA, it adopts a risk-proportionate approach emphasizing human-centric AI deployment and organizational accountability.",
+  "source_url": "https://www.pdpc.gov.sg/help-and-resources/2020/01/model-ai-governance-framework",
+  "last_updated": "2024-01-15T00:00:00",
+  "version": "2.0",
+  "risk_tiers": [
+    {
+      "tier_name": "High Risk - High Severity",
+      "risk_level": "high",
+      "description": "AI systems where decisions have significant impact on individuals and are fully autonomous with no human involvement in decision-making.",
+      "criteria": [
+        "Autonomous decision-making with significant individual impact",
+        "AI determines outcomes in healthcare diagnosis or treatment",
+        "Autonomous financial decisions affecting creditworthiness",
+        "AI-driven decisions in criminal justice or law enforcement",
+        "No human-in-the-loop for consequential decisions"
+      ]
+    },
+    {
+      "tier_name": "High Risk - Low Severity",
+      "risk_level": "high",
+      "description": "AI systems with significant impact on individuals but with human oversight in the decision-making process.",
+      "criteria": [
+        "Human-in-the-loop for significant decisions",
+        "AI assists in medical diagnosis with physician review",
+        "AI recommends financial products with advisor oversight",
+        "Automated screening with human final decision"
+      ]
+    },
+    {
+      "tier_name": "Low Risk - High Autonomy",
+      "risk_level": "limited",
+      "description": "AI systems operating autonomously but with limited impact on individuals' rights or wellbeing.",
+      "criteria": [
+        "Autonomous operation with limited individual impact",
+        "Content recommendation systems",
+        "Automated customer service for non-critical queries",
+        "Predictive maintenance systems"
+      ]
+    },
+    {
+      "tier_name": "Low Risk - Low Autonomy",
+      "risk_level": "minimal",
+      "description": "AI systems with limited autonomy and limited impact, posing minimal governance concerns.",
+      "criteria": [
+        "Human-in-the-loop with limited individual impact",
+        "AI-assisted spell checking or grammar tools",
+        "Basic data analytics and visualization",
+        "Internal process optimization tools"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Establish internal governance structures and measures including clear roles, risk assessment processes, and decision-making frameworks for AI deployment",
+      "article_reference": "Section 2.1 - Internal Governance",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Determine and implement appropriate level of human involvement in AI-augmented decision-making based on risk severity and probability of harm",
+      "article_reference": "Section 2.2 - Human Involvement",
+      "applies_to_risk_levels": ["high"],
+      "category": "human_oversight"
+    },
+    {
+      "obligation": "Implement operations management practices including data management, model monitoring, and performance tracking throughout the AI system lifecycle",
+      "article_reference": "Section 3.1 - Operations Management",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "data_governance"
+    },
+    {
+      "obligation": "Provide clear communication to stakeholders about AI-driven decisions, including explanations of how decisions are reached and avenues for recourse",
+      "article_reference": "Section 3.2 - Stakeholder Communication",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "transparency"
+    },
+    {
+      "obligation": "Implement measures to minimize bias and ensure fairness in AI decision-making, including regular testing and monitoring for discriminatory outcomes",
+      "article_reference": "Section 4 - Fairness",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "fairness"
+    }
+  ],
+  "data_residency_requirements": [
+    "Singapore (recommended for PDPA compliance)",
+    "ASEAN member states (with appropriate safeguards)"
+  ],
+  "enforcement_timeline": "Voluntary framework; organizations encouraged to adopt progressively. Implementation Companion Guide (A.I. Verify) available for self-assessment since 2022.",
+  "recent_changes": [
+    "AI Verify Foundation launched as an open-source testing framework and governance toolkit",
+    "Generative AI governance guidance published addressing foundation model risks",
+    "Updated companion guide with practical implementation examples"
+  ]
+}

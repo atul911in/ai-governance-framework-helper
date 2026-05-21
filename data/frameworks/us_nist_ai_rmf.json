@@ -1,0 +1,101 @@
+{
+  "framework_id": "us_nist_ai_rmf",
+  "display_name": "US NIST AI Risk Management Framework",
+  "country_or_region": "United States",
+  "summary": "The NIST AI Risk Management Framework (AI RMF 1.0) provides a voluntary, rights-preserving framework for managing risks associated with AI systems. It is structured around four core functions: Govern, Map, Measure, and Manage, enabling organizations to address AI risks throughout the system lifecycle.",
+  "source_url": "https://www.nist.gov/artificial-intelligence/executive-order-safe-secure-and-trustworthy-artificial-intelligence",
+  "last_updated": "2024-04-29T00:00:00",
+  "version": "1.0",
+  "risk_tiers": [
+    {
+      "tier_name": "Unacceptable Risk",
+      "risk_level": "unacceptable",
+      "description": "AI systems with risks that cannot be adequately mitigated and should not be deployed. Determined through the Map and Measure functions when residual risks exceed organizational tolerance.",
+      "criteria": [
+        "AI systems where potential harms are catastrophic and irreversible",
+        "Systems that fundamentally undermine civil rights or democratic values",
+        "AI applications where no effective risk mitigation is feasible",
+        "Systems operating in safety-critical domains without adequate fail-safes"
+      ]
+    },
+    {
+      "tier_name": "High Risk",
+      "risk_level": "high",
+      "description": "AI systems with significant potential for adverse impacts on individuals, communities, or society. Requires comprehensive risk management across all four framework functions.",
+      "criteria": [
+        "AI systems making consequential decisions about individuals (employment, credit, housing)",
+        "Systems deployed in safety-critical environments (healthcare, transportation, infrastructure)",
+        "AI with potential for significant bias or discrimination impacts",
+        "Systems processing sensitive personal data at scale",
+        "Autonomous systems with limited human oversight capability"
+      ]
+    },
+    {
+      "tier_name": "Limited Risk",
+      "risk_level": "limited",
+      "description": "AI systems with moderate potential for adverse impacts that can be effectively managed through standard risk management practices and transparency measures.",
+      "criteria": [
+        "AI systems with human-in-the-loop for consequential decisions",
+        "Content generation systems with appropriate disclosure",
+        "Recommendation systems with moderate individual impact",
+        "AI-assisted analytics with human review of outputs"
+      ]
+    },
+    {
+      "tier_name": "Minimal Risk",
+      "risk_level": "minimal",
+      "description": "AI systems with negligible potential for adverse impacts. Basic governance practices and monitoring are sufficient.",
+      "criteria": [
+        "Internal productivity tools with no external impact",
+        "AI systems with well-understood and bounded behavior",
+        "Low-stakes automation with easy human override",
+        "Research and development prototypes not deployed to production"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Establish AI governance policies, processes, procedures, and practices across the organization including roles, responsibilities, and accountability structures (GOVERN function)",
+      "article_reference": "GOVERN 1.0-6.0",
+      "applies_to_risk_levels": ["high", "limited", "minimal"],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Categorize and contextualize AI systems to identify potential risks, including mapping intended and unintended impacts on individuals, communities, and ecosystems (MAP function)",
+      "article_reference": "MAP 1.0-5.0",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "safety"
+    },
+    {
+      "obligation": "Employ quantitative and qualitative methods to analyze, assess, benchmark, and monitor AI risk and related impacts using appropriate metrics and methodologies (MEASURE function)",
+      "article_reference": "MEASURE 1.0-4.0",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "safety"
+    },
+    {
+      "obligation": "Allocate risk management resources and implement plans to respond to, recover from, and communicate about AI risks and incidents (MANAGE function)",
+      "article_reference": "MANAGE 1.0-4.0",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Ensure AI systems are valid, reliable, safe, secure, resilient, accountable, transparent, explainable, interpretable, privacy-enhanced, and fair with harmful bias managed",
+      "article_reference": "AI RMF Characteristics of Trustworthy AI",
+      "applies_to_risk_levels": ["high"],
+      "category": "fairness"
+    },
+    {
+      "obligation": "Implement processes for ongoing monitoring, periodic evaluation, and continuous improvement of AI risk management practices",
+      "article_reference": "GOVERN 5.0, MEASURE 4.0",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "accountability"
+    }
+  ],
+  "data_residency_requirements": null,
+  "enforcement_timeline": "Voluntary framework published January 2023. Executive Order 14110 (October 2023) directs federal agencies to adopt AI RMF. NIST AI RMF Playbook and profiles provide implementation guidance.",
+  "recent_changes": [
+    "NIST AI RMF Generative AI Profile (NIST AI 600-1) released addressing generative AI-specific risks",
+    "Companion NIST AI RMF Playbook updated with practical implementation guidance",
+    "Crosswalks published mapping AI RMF to ISO/IEC 23894 and EU AI Act requirements"
+  ]
+}

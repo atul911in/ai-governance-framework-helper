@@ -1,0 +1,113 @@
+{
+  "framework_id": "uk_ai_regulation",
+  "display_name": "UK AI Regulation (Pro-Innovation Approach)",
+  "country_or_region": "United Kingdom",
+  "summary": "The UK adopts a principles-based, pro-innovation approach to AI regulation. Rather than creating new legislation or a dedicated AI regulator, it empowers existing sector regulators to apply five cross-cutting principles within their domains. This context-specific approach aims to be proportionate and adaptable.",
+  "source_url": "https://assets.publishing.service.gov.uk/media/65c0b6bd63a23d0013c821a0/implementing_the_uk_ai_regulatory_principles_guidance_for_regulators.pdf",
+  "last_updated": "2024-02-06T00:00:00",
+  "version": "1.0",
+  "risk_tiers": [
+    {
+      "tier_name": "Safety, Security and Robustness",
+      "risk_level": "limited",
+      "description": "AI systems should function in a robust, secure, and safe way throughout their lifecycle. Risks should be continually identified, assessed, and managed. Systems should be resilient to attempts to alter their use or performance.",
+      "criteria": [
+        "System operates in safety-critical domain (healthcare, transport, infrastructure)",
+        "Potential for physical harm or property damage from system failure",
+        "System processes sensitive data requiring security protections",
+        "Adversarial attack surface exists that could compromise system integrity",
+        "System reliability is critical to downstream decision-making"
+      ]
+    },
+    {
+      "tier_name": "Appropriate Transparency and Explainability",
+      "risk_level": "limited",
+      "description": "AI systems should be appropriately transparent and explainable. The degree of transparency should be proportionate to the level of risk and context of deployment, enabling users and affected parties to understand AI-driven outcomes.",
+      "criteria": [
+        "System makes or supports decisions affecting individuals",
+        "Users need to understand basis of AI-generated outputs",
+        "Regulatory oversight requires audit trail of decisions",
+        "Public-facing system where trust depends on understanding",
+        "System outputs influence significant resource allocation"
+      ]
+    },
+    {
+      "tier_name": "Fairness",
+      "risk_level": "limited",
+      "description": "AI systems should not undermine the legal rights of individuals or organizations, discriminate unfairly, or create unfair market outcomes. Existing legal protections (Equality Act 2010, GDPR UK) apply to AI-driven decisions.",
+      "criteria": [
+        "System makes decisions about individuals based on personal characteristics",
+        "Potential for discriminatory outcomes across protected characteristics",
+        "System affects access to services, employment, or opportunities",
+        "Training data may reflect historical biases",
+        "System operates in markets where fair competition is required"
+      ]
+    },
+    {
+      "tier_name": "Accountability and Governance",
+      "risk_level": "limited",
+      "description": "Appropriate measures should be in place to ensure accountability for AI systems and their outcomes. Governance structures should enable oversight, with clear lines of responsibility throughout the AI lifecycle.",
+      "criteria": [
+        "Organization deploys AI affecting third parties",
+        "AI system operates with significant autonomy",
+        "Multiple stakeholders involved in AI system lifecycle",
+        "Regulatory compliance obligations apply to AI-driven processes",
+        "System decisions may need to be reviewed or audited"
+      ]
+    },
+    {
+      "tier_name": "Contestability and Redress",
+      "risk_level": "limited",
+      "description": "People should have clear routes to contest harmful AI-driven decisions or outcomes. Appropriate mechanisms for redress should be available, proportionate to the significance of the decision.",
+      "criteria": [
+        "AI system makes or contributes to decisions with significant individual impact",
+        "Individuals may be adversely affected by AI-driven outcomes",
+        "Legal rights may be affected by automated decision-making",
+        "System operates in regulated sector with existing complaint mechanisms",
+        "Decisions are difficult to reverse without intervention"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Ensure AI systems are technically robust, secure against adversarial attacks, and have appropriate fallback mechanisms and fail-safes proportionate to the risk level",
+      "article_reference": "Principle 1 - Safety, Security and Robustness",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "safety"
+    },
+    {
+      "obligation": "Provide appropriate transparency about when AI is being used, how it works, and the basis for AI-driven decisions, proportionate to context and risk",
+      "article_reference": "Principle 2 - Transparency and Explainability",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "transparency"
+    },
+    {
+      "obligation": "Ensure AI systems comply with existing equality and human rights law, actively assess and mitigate risks of bias and discrimination in AI outcomes",
+      "article_reference": "Principle 3 - Fairness",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "fairness"
+    },
+    {
+      "obligation": "Establish clear governance frameworks with defined roles, responsibilities, and oversight mechanisms for AI systems throughout their lifecycle",
+      "article_reference": "Principle 4 - Accountability and Governance",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Provide accessible mechanisms for individuals to challenge AI-driven decisions and seek redress for harmful outcomes, with clear escalation paths",
+      "article_reference": "Principle 5 - Contestability and Redress",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "accountability"
+    }
+  ],
+  "data_residency_requirements": [
+    "UK (UK GDPR applies)",
+    "Adequate jurisdictions per UK adequacy decisions"
+  ],
+  "enforcement_timeline": "AI Regulation White Paper published March 2023. Regulators issued initial guidance by April 2024. No dedicated AI legislation planned; existing regulators (FCA, ICO, Ofcom, CMA, MHRA, etc.) apply principles within their remits.",
+  "recent_changes": [
+    "Government response to AI Regulation White Paper consultation published February 2024",
+    "Sector regulators published initial approaches to implementing AI principles",
+    "AI Safety Institute established for frontier AI safety research and evaluation"
+  ]
+}

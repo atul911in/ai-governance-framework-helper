@@ -1,0 +1,93 @@
+{
+  "framework_id": "iso_42001",
+  "display_name": "ISO/IEC 42001 - AI Management System",
+  "country_or_region": "International",
+  "summary": "ISO/IEC 42001 is the world's first international management system standard for artificial intelligence. It specifies requirements for establishing, implementing, maintaining, and continually improving an AI Management System (AIMS) within organizations. It provides a structured framework for managing AI-related risks and opportunities.",
+  "source_url": "https://www.iso.org/standard/81230.html",
+  "last_updated": "2024-01-01T00:00:00",
+  "version": "1.0",
+  "risk_tiers": [
+    {
+      "tier_name": "High Risk AI Application",
+      "risk_level": "high",
+      "description": "AI applications where the organization's risk assessment identifies significant potential for adverse impacts on individuals, groups, or society. Requires comprehensive controls and enhanced management system processes.",
+      "criteria": [
+        "AI system makes autonomous decisions with significant consequences",
+        "System processes sensitive personal data or biometric information",
+        "AI operates in safety-critical or life-affecting domains",
+        "Potential for significant financial, reputational, or legal impact",
+        "System affects fundamental rights or freedoms of individuals",
+        "AI system has broad societal impact or affects vulnerable groups"
+      ]
+    },
+    {
+      "tier_name": "Medium Risk AI Application",
+      "risk_level": "limited",
+      "description": "AI applications with moderate risk levels where standard management system controls are appropriate. Regular monitoring and periodic review of risk assessments required.",
+      "criteria": [
+        "AI system supports human decision-making with moderate impact",
+        "System processes non-sensitive data with appropriate safeguards",
+        "AI operates in commercial contexts with established oversight",
+        "Moderate potential for bias or fairness concerns",
+        "System has defined operational boundaries and constraints"
+      ]
+    },
+    {
+      "tier_name": "Low Risk AI Application",
+      "risk_level": "minimal",
+      "description": "AI applications where risk assessment identifies minimal potential for adverse impacts. Basic management system controls and periodic review are sufficient.",
+      "criteria": [
+        "AI system operates with full human oversight and control",
+        "System has negligible impact on individuals or society",
+        "AI used for internal optimization with no external effects",
+        "Well-understood technology with predictable behavior",
+        "Low-stakes applications with easy reversibility"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Establish an AI policy and AI management system with defined scope, leadership commitment, and allocated resources appropriate to the organization's context and AI risk profile",
+      "article_reference": "Clauses 4-5 - Context and Leadership",
+      "applies_to_risk_levels": ["high", "limited", "minimal"],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Conduct and maintain AI risk assessments identifying potential adverse impacts of AI systems, evaluating likelihood and severity, and determining appropriate risk treatment measures",
+      "article_reference": "Clause 6.1 - Actions to Address Risks",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "safety"
+    },
+    {
+      "obligation": "Implement AI system impact assessments for affected individuals and groups, considering fairness, transparency, explainability, and potential for harm throughout the system lifecycle",
+      "article_reference": "Annex B - AI Impact Assessment",
+      "applies_to_risk_levels": ["high"],
+      "category": "fairness"
+    },
+    {
+      "obligation": "Establish data management processes ensuring data quality, provenance, relevance, and appropriateness for AI system training, testing, and operation",
+      "article_reference": "Annex A - Control A.7 Data for AI Systems",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "data_governance"
+    },
+    {
+      "obligation": "Implement transparency measures providing appropriate information about AI systems to stakeholders, including purpose, capabilities, limitations, and human oversight mechanisms",
+      "article_reference": "Annex A - Control A.6 Transparency",
+      "applies_to_risk_levels": ["high", "limited"],
+      "category": "transparency"
+    },
+    {
+      "obligation": "Monitor, measure, analyze, and evaluate AI system performance and the effectiveness of the AI management system, conducting internal audits and management reviews at planned intervals",
+      "article_reference": "Clauses 9-10 - Performance Evaluation and Improvement",
+      "applies_to_risk_levels": ["high", "limited", "minimal"],
+      "category": "accountability"
+    }
+  ],
+  "data_residency_requirements": null,
+  "enforcement_timeline": "Published December 2023. Certification available through accredited certification bodies. Organizations can seek certification to demonstrate conformity. Complements but does not replace jurisdiction-specific AI regulations.",
+  "recent_changes": [
+    "ISO/IEC 42001:2023 published as first AI management system standard",
+    "Certification bodies began offering ISO 42001 certification assessments",
+    "Supporting standards in development: ISO/IEC 42005 (AI impact assessment), ISO/IEC 42006 (certification body requirements)"
+  ]
+}

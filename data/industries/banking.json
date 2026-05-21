@@ -1,0 +1,58 @@
+{
+  "sector": "banking",
+  "display_name": "Banking & Financial Services",
+  "regulatory_context": "The banking sector faces stringent AI regulation due to the direct impact on consumer financial wellbeing. Regulators focus on fairness in credit decisions, explainability of automated underwriting, and prevention of algorithmic discrimination. Financial institutions must comply with both general AI governance frameworks and sector-specific regulations such as fair lending laws, anti-money laundering requirements, and prudential oversight standards.",
+  "key_regulators": [
+    "European Banking Authority (EBA)",
+    "US Consumer Financial Protection Bureau (CFPB)",
+    "UK Financial Conduct Authority (FCA)",
+    "Basel Committee on Banking Supervision (BCBS)",
+    "Office of the Comptroller of the Currency (OCC)"
+  ],
+  "common_ai_use_cases": [
+    {
+      "use_case": "Credit scoring and lending decisions",
+      "risk_considerations": "High-risk due to direct impact on individuals' access to financial services. Potential for discriminatory outcomes based on protected characteristics embedded in training data. Requires explainability for adverse action notices.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "uk_ai_regulation"]
+    },
+    {
+      "use_case": "Anti-money laundering (AML) transaction monitoring",
+      "risk_considerations": "High-risk due to potential for false positives affecting legitimate customers and false negatives enabling financial crime. Regulatory expectations for model validation and ongoing monitoring.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "uk_ai_regulation", "singapore_maigf"]
+    },
+    {
+      "use_case": "Fraud detection and prevention",
+      "risk_considerations": "Medium-to-high risk depending on implementation. Real-time decision-making with limited human oversight raises concerns about false accusations and account freezes without due process.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "iso_42001"]
+    },
+    {
+      "use_case": "Algorithmic trading and portfolio management",
+      "risk_considerations": "Systemic risk concerns due to potential for cascading failures. Market manipulation risks from adversarial exploitation. Requires robust testing and circuit breakers.",
+      "applicable_frameworks": ["eu_ai_act", "uk_ai_regulation", "singapore_maigf"]
+    }
+  ],
+  "best_practices": [
+    "Implement model risk management frameworks aligned with SR 11-7 (US) or equivalent local guidance for all AI/ML models used in decision-making",
+    "Conduct regular fairness audits using disparate impact analysis across protected characteristics before and after model deployment",
+    "Maintain comprehensive model documentation including training data provenance, feature importance, and performance metrics disaggregated by demographic groups",
+    "Establish human-in-the-loop review processes for high-value or high-impact automated decisions with clear escalation paths",
+    "Implement explainability mechanisms that can generate individualized explanations for adverse credit decisions as required by fair lending regulations"
+  ],
+  "sector_specific_obligations": [
+    {
+      "obligation": "Provide clear explanations for automated credit decisions and adverse actions, including principal factors contributing to the decision",
+      "source": "Equal Credit Opportunity Act (ECOA) / EU AI Act Article 86",
+      "category": "transparency"
+    },
+    {
+      "obligation": "Conduct and document regular bias testing across protected characteristics for all models used in lending, insurance pricing, or account management decisions",
+      "source": "Fair Housing Act / EBA Guidelines on ML for IRB Models",
+      "category": "fairness"
+    },
+    {
+      "obligation": "Maintain independent model validation function with authority to restrict or retire models that fail performance or fairness thresholds",
+      "source": "SR 11-7 Model Risk Management / PRA SS1/23",
+      "category": "accountability"
+    }
+  ]
+}

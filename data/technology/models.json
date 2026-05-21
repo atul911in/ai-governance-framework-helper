@@ -1,0 +1,245 @@
+[
+  {
+    "category": "llm_model",
+    "name": "GPT-4o",
+    "provider": "OpenAI",
+    "description": "OpenAI's most advanced multimodal model, capable of processing text, images, and audio. Offers GPT-4-level intelligence with significantly faster response times and lower cost, making it suitable for production AI governance applications.",
+    "key_capabilities": [
+      "Multimodal input (text, image, audio)",
+      "Advanced reasoning and analysis",
+      "Function calling and structured output",
+      "128K context window for large document processing",
+      "JSON mode for reliable structured responses",
+      "Multi-language support across 50+ languages",
+      "Vision capabilities for document analysis"
+    ],
+    "pros": [
+      "Best price-to-performance ratio in the GPT-4 family",
+      "Multimodal capabilities enable document and image analysis workflows",
+      "Fast inference speed suitable for interactive applications",
+      "Strong function calling for agent tool use",
+      "Available via Azure OpenAI Service for enterprise compliance"
+    ],
+    "cons": [
+      "Requires API key management and usage monitoring",
+      "Data processing policies require review for regulated industries",
+      "Model behavior can vary between versions without notice",
+      "Limited availability in some regions without Azure OpenAI",
+      "Cost can scale quickly with high-volume usage"
+    ],
+    "compliance_notes": "Available through Azure OpenAI Service with enterprise data privacy guarantees (data not used for training). When accessed via OpenAI API directly, review data usage policies for compliance. Supports content filtering and abuse monitoring. SOC 2 Type 2 certified (OpenAI).",
+    "context_window": 128000,
+    "cost_per_token": "$2.50 per 1M input tokens / $10.00 per 1M output tokens",
+    "supported_regions": [
+      "us-east-1",
+      "us-west-2",
+      "eu-west-1",
+      "eu-central-1",
+      "eastus",
+      "eastus2",
+      "westus",
+      "westus3",
+      "northeurope",
+      "westeurope",
+      "swedencentral",
+      "uksouth",
+      "francecentral",
+      "southeastasia",
+      "japaneast",
+      "australiaeast",
+      "canadacentral"
+    ]
+  },
+  {
+    "category": "llm_model",
+    "name": "GPT-4 Turbo",
+    "provider": "OpenAI",
+    "description": "High-capability language model with 128K context window and knowledge cutoff of April 2024. Optimized for complex reasoning tasks, code generation, and detailed analysis with improved instruction following.",
+    "key_capabilities": [
+      "128K context window for large document analysis",
+      "Advanced reasoning and multi-step problem solving",
+      "Code generation and analysis",
+      "Function calling with parallel tool use",
+      "JSON mode for structured outputs",
+      "Vision capabilities (GPT-4 Turbo with Vision)",
+      "Improved instruction following and reduced hallucination"
+    ],
+    "pros": [
+      "Excellent reasoning capabilities for complex governance analysis",
+      "Large context window supports processing lengthy regulatory documents",
+      "Reliable function calling for agent architectures",
+      "Well-established model with extensive documentation and community support",
+      "Available via Azure OpenAI Service for enterprise deployments"
+    ],
+    "cons": [
+      "Higher cost per token compared to GPT-4o",
+      "Slower inference speed than GPT-4o",
+      "Being superseded by GPT-4o for most use cases",
+      "Same data privacy considerations as other OpenAI models",
+      "Rate limits can constrain high-throughput applications"
+    ],
+    "compliance_notes": "Available through Azure OpenAI Service with enterprise data privacy guarantees. OpenAI API access subject to data usage policies that should be reviewed for regulated workloads. Supports content filtering. SOC 2 Type 2 certified (OpenAI).",
+    "context_window": 128000,
+    "cost_per_token": "$10.00 per 1M input tokens / $30.00 per 1M output tokens",
+    "supported_regions": [
+      "us-east-1",
+      "us-west-2",
+      "eu-west-1",
+      "eastus",
+      "eastus2",
+      "westus",
+      "northeurope",
+      "westeurope",
+      "swedencentral",
+      "uksouth",
+      "southeastasia",
+      "japaneast",
+      "australiaeast",
+      "canadacentral"
+    ]
+  },
+  {
+    "category": "llm_model",
+    "name": "Claude 3.5 Sonnet",
+    "provider": "Anthropic",
+    "description": "Anthropic's most capable model balancing intelligence and speed. Excels at complex reasoning, coding, and nuanced analysis tasks. Designed with constitutional AI principles for safer outputs.",
+    "key_capabilities": [
+      "200K context window for extensive document processing",
+      "Advanced reasoning and analysis",
+      "Strong coding and technical writing capabilities",
+      "Vision and document understanding",
+      "Tool use and function calling",
+      "Nuanced instruction following",
+      "Constitutional AI safety alignment"
+    ],
+    "pros": [
+      "Excellent at nuanced reasoning and following complex instructions",
+      "200K context window is largest among leading models",
+      "Strong safety alignment reduces harmful output risk",
+      "Available on AWS Bedrock and GCP Vertex AI for enterprise compliance",
+      "Competitive performance with lower hallucination rates on benchmarks",
+      "Good at structured output and consistent formatting"
+    ],
+    "cons": [
+      "Not available via Azure OpenAI Service",
+      "Anthropic API has fewer enterprise compliance certifications than Azure/AWS",
+      "Can be overly cautious in responses due to safety training",
+      "Smaller ecosystem of fine-tuning and customization options",
+      "Regional availability more limited than GPT models"
+    ],
+    "compliance_notes": "Available through AWS Bedrock (data stays in AWS account, inherits AWS compliance) and GCP Vertex AI. Anthropic is SOC 2 Type 2 certified. When accessed via Bedrock, data is not used for model training. Anthropic's data retention policies should be reviewed when using direct API access for regulated workloads.",
+    "context_window": 200000,
+    "cost_per_token": "$3.00 per 1M input tokens / $15.00 per 1M output tokens",
+    "supported_regions": [
+      "us-east-1",
+      "us-west-2",
+      "eu-west-1",
+      "eu-central-1",
+      "ap-southeast-1",
+      "ap-northeast-1",
+      "us-central1",
+      "us-east4",
+      "europe-west1",
+      "europe-west4",
+      "asia-southeast1"
+    ]
+  },
+  {
+    "category": "llm_model",
+    "name": "Gemini 1.5 Pro",
+    "provider": "Google",
+    "description": "Google's most capable model with an industry-leading 1M token context window. Built on Google's Mixture-of-Experts architecture, excelling at long-document understanding, multimodal reasoning, and code generation.",
+    "key_capabilities": [
+      "1M token context window (largest available)",
+      "Multimodal input (text, image, video, audio)",
+      "Long-document understanding and summarization",
+      "Advanced code generation and analysis",
+      "Function calling and structured output",
+      "Multi-language support",
+      "Native Google Cloud integration via Vertex AI"
+    ],
+    "pros": [
+      "Largest context window enables processing entire codebases or regulatory documents",
+      "Strong multimodal capabilities for diverse input types",
+      "Competitive pricing especially for long-context workloads",
+      "Native integration with Google Cloud and Vertex AI",
+      "Good performance on reasoning and analysis benchmarks"
+    ],
+    "cons": [
+      "Only available through Google Cloud / Vertex AI for enterprise use",
+      "Fewer third-party platform integrations compared to OpenAI models",
+      "Google Cloud has fewer government-specific compliance offerings",
+      "Model versioning and deprecation policies less transparent",
+      "Smaller developer community and fewer production case studies"
+    ],
+    "compliance_notes": "Available through Google Cloud Vertex AI with enterprise data privacy controls. Data is not used for model training when accessed via Vertex AI. Google Cloud compliance certifications apply (SOC 1/2/3, ISO 27001, HIPAA, FedRAMP). Assured Workloads can provide additional compliance guardrails.",
+    "context_window": 1000000,
+    "cost_per_token": "$1.25 per 1M input tokens (<=128K) / $5.00 per 1M output tokens",
+    "supported_regions": [
+      "us-central1",
+      "us-east1",
+      "us-east4",
+      "us-west1",
+      "europe-west1",
+      "europe-west2",
+      "europe-west3",
+      "europe-west4",
+      "asia-southeast1",
+      "asia-east1",
+      "asia-northeast1",
+      "australia-southeast1",
+      "northamerica-northeast1"
+    ]
+  },
+  {
+    "category": "llm_model",
+    "name": "Llama 3.1 405B",
+    "provider": "Meta",
+    "description": "Meta's largest open-weight language model with 405 billion parameters. Available for self-hosting or through cloud providers (AWS Bedrock, Azure, GCP). Offers strong performance with full control over data residency and model deployment.",
+    "key_capabilities": [
+      "128K context window",
+      "Open weights enabling self-hosting and customization",
+      "Strong reasoning and code generation",
+      "Function calling and tool use support",
+      "Multi-language support across 8 languages",
+      "Fine-tuning and customization capabilities",
+      "Available through multiple cloud providers"
+    ],
+    "pros": [
+      "Open weights provide full transparency and auditability",
+      "Self-hosting option gives complete data residency control",
+      "No per-token API costs when self-hosted (infrastructure costs only)",
+      "Can be fine-tuned for domain-specific governance tasks",
+      "Available on AWS Bedrock, Azure, and GCP for managed deployment",
+      "No vendor lock-in to a single API provider"
+    ],
+    "cons": [
+      "Self-hosting requires significant GPU infrastructure (8x A100/H100)",
+      "Managed cloud hosting still incurs per-token costs",
+      "Slightly lower performance than GPT-4o and Claude 3.5 on complex reasoning",
+      "Smaller 128K context window compared to Claude and Gemini",
+      "Community support rather than dedicated enterprise support",
+      "Responsible use license has some restrictions on deployment"
+    ],
+    "compliance_notes": "Open weights enable full audit of model behavior. Self-hosting provides complete data sovereignty with no data leaving organizational boundaries. When accessed via cloud providers (Bedrock, Azure, Vertex AI), inherits respective platform compliance certifications. Meta's Responsible Use Guide should be reviewed for deployment constraints.",
+    "context_window": 128000,
+    "cost_per_token": "$0.00195 per 1K input tokens / $0.00256 per 1K output tokens (via AWS Bedrock)",
+    "supported_regions": [
+      "us-east-1",
+      "us-west-2",
+      "eu-west-1",
+      "eu-central-1",
+      "ap-southeast-1",
+      "ap-northeast-1",
+      "eastus",
+      "eastus2",
+      "westus",
+      "westeurope",
+      "swedencentral",
+      "us-central1",
+      "us-east4",
+      "europe-west1",
+      "europe-west4"
+    ]
+  }
+]

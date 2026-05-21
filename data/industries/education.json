@@ -1,0 +1,58 @@
+{
+  "sector": "education",
+  "display_name": "Education & EdTech",
+  "regulatory_context": "AI in education is classified as high-risk under the EU AI Act when used for determining access to education, assessing students, or adapting instruction. Regulators are concerned about the impact on children and young people, algorithmic bias in assessment, surveillance in educational settings, and the potential for AI to reinforce existing educational inequities. Student data protection receives heightened attention.",
+  "key_regulators": [
+    "European Commission (DG EAC - Education)",
+    "US Department of Education",
+    "UK Office for Students / Ofqual",
+    "National data protection authorities (children's data)",
+    "UNESCO (AI in Education guidelines)"
+  ],
+  "common_ai_use_cases": [
+    {
+      "use_case": "Automated grading and assessment",
+      "risk_considerations": "High-risk under EU AI Act as it determines educational outcomes. Concerns about bias in language models used for essay scoring, fairness across demographic groups, and lack of transparency in grading criteria.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "uk_ai_regulation", "canada_aida"]
+    },
+    {
+      "use_case": "Adaptive learning and personalized instruction",
+      "risk_considerations": "Medium-to-high risk. While personalization can improve outcomes, concerns exist about tracking student behavior, creating filter bubbles in learning, and potential for reinforcing achievement gaps.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "australia_ai_ethics"]
+    },
+    {
+      "use_case": "Student risk prediction and early warning systems",
+      "risk_considerations": "High-risk due to potential for self-fulfilling prophecies, labeling effects, and bias against students from disadvantaged backgrounds. Predictions based on historical data may perpetuate systemic inequities.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "canada_aida", "iso_42001"]
+    },
+    {
+      "use_case": "Admissions and enrollment decision support",
+      "risk_considerations": "High-risk as it directly affects access to educational opportunities. Historical admissions data may embed socioeconomic and racial biases. Requires transparency and appeals mechanisms.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "uk_ai_regulation"]
+    }
+  ],
+  "best_practices": [
+    "Conduct age-appropriate impact assessments for AI systems used with minors, with heightened protections for children's data and developmental considerations",
+    "Ensure educators retain meaningful oversight and final authority over AI-assisted assessment and grading decisions",
+    "Implement transparency mechanisms that allow students and parents to understand how AI influences educational decisions and recommendations",
+    "Validate AI assessment tools across diverse student populations to ensure equitable outcomes regardless of socioeconomic background, language, or disability",
+    "Minimize data collection from students to what is strictly necessary for the educational purpose, with clear retention and deletion policies"
+  ],
+  "sector_specific_obligations": [
+    {
+      "obligation": "Conduct conformity assessments for AI systems used to determine access to education or evaluate students, demonstrating fairness and accuracy across demographic groups",
+      "source": "EU AI Act Annex III (Education) / UK Equality Act 2010",
+      "category": "fairness"
+    },
+    {
+      "obligation": "Obtain appropriate consent for processing children's personal data in AI-driven educational tools, with age-verification mechanisms and parental controls",
+      "source": "COPPA / GDPR Article 8 (Children's Consent) / Age Appropriate Design Code",
+      "category": "data_governance"
+    },
+    {
+      "obligation": "Provide students and parents with clear information about AI systems used in educational settings, including the right to request human review of automated decisions",
+      "source": "EU AI Act Article 86 / FERPA / Student data protection laws",
+      "category": "transparency"
+    }
+  ]
+}

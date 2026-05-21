@@ -1,0 +1,58 @@
+{
+  "sector": "insurance",
+  "display_name": "Insurance",
+  "regulatory_context": "The insurance sector uses AI extensively for underwriting, claims processing, and pricing. Regulators are concerned about algorithmic discrimination in risk assessment, lack of transparency in automated claims decisions, and the use of non-traditional data sources that may serve as proxies for protected characteristics. Actuarial fairness principles must be balanced with anti-discrimination requirements.",
+  "key_regulators": [
+    "European Insurance and Occupational Pensions Authority (EIOPA)",
+    "National Association of Insurance Commissioners (NAIC)",
+    "UK Prudential Regulation Authority (PRA)",
+    "Monetary Authority of Singapore (MAS)",
+    "Australian Prudential Regulation Authority (APRA)"
+  ],
+  "common_ai_use_cases": [
+    {
+      "use_case": "Automated underwriting and risk assessment",
+      "risk_considerations": "High-risk due to potential for unfair discrimination in coverage decisions. Use of alternative data sources (social media, IoT) may introduce proxy discrimination. Actuarial justification requirements apply.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "uk_ai_regulation"]
+    },
+    {
+      "use_case": "Claims processing and fraud detection",
+      "risk_considerations": "Medium-to-high risk. Automated claims denials can cause significant harm to policyholders. False fraud flags may delay legitimate claims and damage customer relationships.",
+      "applicable_frameworks": ["eu_ai_act", "us_nist_ai_rmf", "australia_ai_ethics"]
+    },
+    {
+      "use_case": "Dynamic pricing and personalization",
+      "risk_considerations": "High-risk due to potential for price discrimination and unfair treatment of vulnerable customers. Regulators scrutinize whether pricing models produce outcomes that correlate with protected characteristics.",
+      "applicable_frameworks": ["eu_ai_act", "uk_ai_regulation", "singapore_maigf"]
+    },
+    {
+      "use_case": "Customer service chatbots and virtual assistants",
+      "risk_considerations": "Limited risk for general inquiries, but elevated risk when providing coverage advice or handling complaints. Must ensure accurate information and appropriate escalation to human agents.",
+      "applicable_frameworks": ["eu_ai_act", "iso_42001"]
+    }
+  ],
+  "best_practices": [
+    "Document actuarial justification for all rating factors used in AI-driven pricing models, demonstrating statistical relevance to risk",
+    "Implement fairness constraints in underwriting models that prevent proxy discrimination through correlated non-protected variables",
+    "Establish clear appeals processes for automated underwriting or claims decisions with guaranteed human review within defined timeframes",
+    "Conduct regular outcome testing to verify that AI-driven decisions do not produce disparate impact across protected groups",
+    "Maintain audit trails for all automated decisions that affect policyholder coverage, claims, or pricing"
+  ],
+  "sector_specific_obligations": [
+    {
+      "obligation": "Ensure AI-driven underwriting decisions can be explained to applicants in plain language, including the key factors that influenced the decision",
+      "source": "EIOPA Guidelines on AI Governance / NAIC Model Bulletin on AI",
+      "category": "transparency"
+    },
+    {
+      "obligation": "Validate that AI pricing models do not unfairly discriminate against protected groups, with documented testing methodology and results",
+      "source": "Insurance Distribution Directive (IDD) / State Unfair Trade Practices Acts",
+      "category": "fairness"
+    },
+    {
+      "obligation": "Implement human oversight mechanisms for claims decisions exceeding defined thresholds, with qualified personnel authorized to override automated determinations",
+      "source": "EIOPA AI Governance Principles / FCA Consumer Duty",
+      "category": "human_oversight"
+    }
+  ]
+}
