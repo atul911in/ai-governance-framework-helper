@@ -44,6 +44,9 @@ class GovernanceFrameworkId(str, Enum):
     CANADA_AIDA = "canada_aida"
     AUSTRALIA_AI_ETHICS = "australia_ai_ethics"
     ISO_42001 = "iso_42001"
+    AWS_AGENTIC_AI = "aws_agentic_ai_governance"
+    MICROSOFT_ACS = "microsoft_acs"
+    OPENAI_FRONTIER = "openai_frontier_governance"
 
 
 class AdviceCategory(str, Enum):

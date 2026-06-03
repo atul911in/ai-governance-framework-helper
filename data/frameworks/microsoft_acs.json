@@ -1,0 +1,111 @@
+{
+  "framework_id": "microsoft_acs",
+  "display_name": "Microsoft Agent Control Specification (ACS)",
+  "country_or_region": "Global (Open Standard)",
+  "summary": "An open-source, vendor-neutral standard for runtime governance of AI agents. Defines how development, compliance, and security teams can establish granular policies governing agent behavior: what agents may do, must not do, when humans must approve, and what must be logged.",
+  "source_url": "https://devblogs.microsoft.com/foundry/build-2026-open-trust-stack-ai-agents",
+  "last_updated": "2026-06-02T00:00:00",
+  "version": "1.0",
+  "risk_tiers": [
+    {
+      "tier_name": "Unrestricted Actions",
+      "risk_level": "minimal",
+      "description": "Agent actions that are pre-approved and can execute without additional controls or human intervention.",
+      "criteria": [
+        "Action is read-only or non-consequential",
+        "Action is fully reversible",
+        "Action operates on non-sensitive data",
+        "Action is within explicitly permitted scope"
+      ]
+    },
+    {
+      "tier_name": "Logged Actions",
+      "risk_level": "limited",
+      "description": "Agent actions that may proceed but must be logged with full evidence trail for audit and review purposes.",
+      "criteria": [
+        "Action modifies state or data",
+        "Action involves user-facing outputs",
+        "Action accesses external services",
+        "Compliance requires audit trail"
+      ]
+    },
+    {
+      "tier_name": "Human-Approved Actions",
+      "risk_level": "high",
+      "description": "Agent actions that require explicit human approval before execution due to their consequential or irreversible nature.",
+      "criteria": [
+        "Action is irreversible or high-impact",
+        "Action involves financial transactions",
+        "Action affects user permissions or access",
+        "Action crosses organizational boundaries",
+        "Action involves sensitive or personal data"
+      ]
+    },
+    {
+      "tier_name": "Prohibited Actions",
+      "risk_level": "unacceptable",
+      "description": "Actions that an agent must never perform regardless of context, forming hard safety boundaries.",
+      "criteria": [
+        "Action violates legal or regulatory requirements",
+        "Action could cause physical harm",
+        "Action involves unauthorized data exfiltration",
+        "Action attempts privilege escalation beyond defined scope"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Define explicit permission policies specifying allowed, denied, and human-approval-required actions for each agent using declarative policy files",
+      "article_reference": "ACS Core - Permission Policies",
+      "applies_to_risk_levels": [
+        "high",
+        "limited",
+        "minimal"
+      ],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Implement runtime policy enforcement that validates every agent action against defined policies before execution proceeds",
+      "article_reference": "ACS Core - Runtime Enforcement",
+      "applies_to_risk_levels": [
+        "high",
+        "limited"
+      ],
+      "category": "safety"
+    },
+    {
+      "obligation": "Maintain comprehensive evidence logs capturing agent reasoning, actions taken, policy evaluations, and human approvals for complete auditability",
+      "article_reference": "ACS Core - Evidence Logging",
+      "applies_to_risk_levels": [
+        "high",
+        "limited"
+      ],
+      "category": "transparency"
+    },
+    {
+      "obligation": "Implement human-in-the-loop checkpoints at policy-defined intervention points with timeout and escalation procedures",
+      "article_reference": "ACS Core - Human Intervention",
+      "applies_to_risk_levels": [
+        "high"
+      ],
+      "category": "human_oversight"
+    },
+    {
+      "obligation": "Ensure policy portability across agent frameworks and runtimes using the vendor-neutral ACS specification format",
+      "article_reference": "ACS Core - Portability",
+      "applies_to_risk_levels": [
+        "high",
+        "limited",
+        "minimal"
+      ],
+      "category": "accountability"
+    }
+  ],
+  "data_residency_requirements": null,
+  "enforcement_timeline": "Open-source specification released June 2, 2026 at Microsoft Build. Framework-agnostic, works with any agent runtime. Supported in Microsoft Foundry and Azure AI.",
+  "recent_changes": [
+    "Initial open-source release at Microsoft Build 2026 (June 2, 2026)",
+    "Integrated with Microsoft Foundry agent platform",
+    "Companion tools: Agent Eval for testing, MXC execution containers for isolation"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "framework_id": "openai_frontier_governance",
+  "display_name": "OpenAI Frontier Governance Framework",
+  "country_or_region": "Global (OpenAI)",
+  "summary": "A governance framework for frontier AI models covering risk assessment and mitigation across cyber offense, CBRN risks, harmful manipulation, and loss of control. Maps internal safety practices to emerging regulations including EU AI Act and California transparency laws.",
+  "source_url": "https://openai.com/index/openai-frontier-governance-framework/",
+  "last_updated": "2026-05-29T00:00:00",
+  "version": "1.0",
+  "risk_tiers": [
+    {
+      "tier_name": "Critical Risk Model",
+      "risk_level": "unacceptable",
+      "description": "Models assessed to pose critical risks that cannot be adequately mitigated. Deployment is halted pending additional safeguards.",
+      "criteria": [
+        "Model demonstrates capability for autonomous CBRN weapon development",
+        "Model shows potential for loss of human control",
+        "Model can autonomously conduct sophisticated cyber attacks",
+        "Risk mitigation measures are insufficient for identified threats"
+      ]
+    },
+    {
+      "tier_name": "High Risk Model",
+      "risk_level": "high",
+      "description": "Models with significant capability in sensitive domains requiring comprehensive safety measures, monitoring, and restricted access.",
+      "criteria": [
+        "Model has significant cyber offense capabilities",
+        "Model can generate CBRN-relevant technical information",
+        "Model demonstrates capacity for harmful manipulation at scale",
+        "Model requires extensive safety testing before deployment"
+      ]
+    },
+    {
+      "tier_name": "Medium Risk Model",
+      "risk_level": "limited",
+      "description": "Models with moderate capabilities that require standard safety measures and monitoring but can be deployed with appropriate guardrails.",
+      "criteria": [
+        "Model has general-purpose capabilities without extreme risk",
+        "Standard content filtering addresses primary risks",
+        "Model operates within well-understood capability boundaries",
+        "Existing safety measures provide adequate protection"
+      ]
+    },
+    {
+      "tier_name": "Low Risk Model",
+      "risk_level": "minimal",
+      "description": "Models with limited capabilities posing minimal novel risks beyond existing technology.",
+      "criteria": [
+        "Model capabilities well within established safety boundaries",
+        "No significant uplift in dangerous capabilities identified",
+        "Standard deployment practices are sufficient"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Conduct systematic risk assessments evaluating model capabilities in cyber offense, CBRN, harmful manipulation, and autonomous action domains before deployment",
+      "article_reference": "Section 2 - Risk Assessment",
+      "applies_to_risk_levels": [
+        "high",
+        "limited"
+      ],
+      "category": "safety"
+    },
+    {
+      "obligation": "Implement model reporting including capability evaluations, safety testing results, and known limitations disclosed to regulators and downstream users",
+      "article_reference": "Section 3 - Model Reporting",
+      "applies_to_risk_levels": [
+        "high",
+        "limited"
+      ],
+      "category": "transparency"
+    },
+    {
+      "obligation": "Maintain security risk management program protecting model weights, training infrastructure, and deployment systems against theft or unauthorized access",
+      "article_reference": "Section 4 - Security Risk Management",
+      "applies_to_risk_levels": [
+        "high"
+      ],
+      "category": "safety"
+    },
+    {
+      "obligation": "Establish incident response procedures for safety-relevant events including detection, escalation, mitigation, and post-incident review processes",
+      "article_reference": "Section 5 - Incident Response",
+      "applies_to_risk_levels": [
+        "high",
+        "limited"
+      ],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Incorporate external expert input through red-teaming, safety advisory boards, and third-party audits to validate safety assessments",
+      "article_reference": "Section 6 - External Expert Input",
+      "applies_to_risk_levels": [
+        "high"
+      ],
+      "category": "accountability"
+    }
+  ],
+  "data_residency_requirements": null,
+  "enforcement_timeline": "Published May 29, 2026. Aligns with EU AI Act requirements for general-purpose AI providers and California transparency laws. Continuously updated as capabilities and regulations evolve.",
+  "recent_changes": [
+    "Initial public release May 29, 2026",
+    "Maps to EU AI Act GPAI provider obligations and California SB-1047 requirements",
+    "Covers frontier model risks: cyber, CBRN, manipulation, loss of control"
+  ]
+}

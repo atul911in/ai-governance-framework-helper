@@ -1,0 +1,102 @@
+{
+  "framework_id": "aws_agentic_ai_governance",
+  "display_name": "AWS Agentic AI Governance Framework",
+  "country_or_region": "Global (AWS)",
+  "summary": "A governance framework for building trustworthy agentic AI for public sector and regulated organizations. Covers governance controls across four implementation areas: foundational monitoring, access control, operational boundaries, and advanced automation oversight.",
+  "source_url": "https://aws.amazon.com/blogs/publicsector/a-governance-framework-for-building-trustworthy-agentic-ai-for-public-sector-and-regulated-organizations/",
+  "last_updated": "2026-05-26T00:00:00",
+  "version": "1.0",
+  "risk_tiers": [
+    {
+      "tier_name": "High Autonomy Agent",
+      "risk_level": "high",
+      "description": "AI agents with significant autonomous decision-making capability, multi-step planning, and ability to take consequential actions without human approval.",
+      "criteria": [
+        "Agent can execute multi-step workflows autonomously",
+        "Agent has access to production systems or sensitive data",
+        "Agent actions are difficult to reverse",
+        "Agent operates in regulated or safety-critical domains",
+        "Agent can interact with external systems or APIs"
+      ]
+    },
+    {
+      "tier_name": "Supervised Agent",
+      "risk_level": "limited",
+      "description": "AI agents that operate with human-in-the-loop oversight, requiring approval for consequential actions while handling routine tasks autonomously.",
+      "criteria": [
+        "Agent requires human approval for high-impact actions",
+        "Agent operates within defined operational boundaries",
+        "Agent actions are logged and auditable",
+        "Human can intervene and override at any point"
+      ]
+    },
+    {
+      "tier_name": "Constrained Agent",
+      "risk_level": "minimal",
+      "description": "AI agents with strictly limited capabilities, operating within narrow task boundaries with full human control.",
+      "criteria": [
+        "Agent limited to single-task execution",
+        "Agent cannot access external systems",
+        "All outputs reviewed before action",
+        "No autonomous decision-making capability"
+      ]
+    }
+  ],
+  "key_obligations": [
+    {
+      "obligation": "Implement foundational monitoring with comprehensive logging of all agent actions, decisions, and state changes for auditability",
+      "article_reference": "Implementation Area 1 - Foundational Monitoring",
+      "applies_to_risk_levels": [
+        "high",
+        "limited",
+        "minimal"
+      ],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Establish granular access controls using IAM policies to restrict agent permissions to minimum required scope with time-bound credentials",
+      "article_reference": "Implementation Area 2 - Access Control",
+      "applies_to_risk_levels": [
+        "high",
+        "limited"
+      ],
+      "category": "safety"
+    },
+    {
+      "obligation": "Define operational boundaries and guardrails that constrain agent behavior including action limits, resource quotas, and escalation triggers",
+      "article_reference": "Implementation Area 3 - Operational Boundaries",
+      "applies_to_risk_levels": [
+        "high",
+        "limited"
+      ],
+      "category": "human_oversight"
+    },
+    {
+      "obligation": "Implement automated governance checks including pre-action validation, post-action verification, and continuous compliance monitoring",
+      "article_reference": "Implementation Area 4 - Advanced Automation",
+      "applies_to_risk_levels": [
+        "high"
+      ],
+      "category": "accountability"
+    },
+    {
+      "obligation": "Design human escalation paths for high-risk decisions with defined SLAs and clear handoff procedures between agent and human operators",
+      "article_reference": "Human Oversight Controls",
+      "applies_to_risk_levels": [
+        "high",
+        "limited"
+      ],
+      "category": "human_oversight"
+    }
+  ],
+  "data_residency_requirements": [
+    "AWS regions (customer choice)",
+    "Supports GovCloud for US government workloads"
+  ],
+  "enforcement_timeline": "Voluntary framework published May 2026. Designed to complement existing regulations (EU AI Act, NIST AI RMF) for agentic AI workloads.",
+  "recent_changes": [
+    "Initial publication May 26, 2026 focused on public sector and regulated organizations",
+    "Four-tier implementation model from monitoring to advanced automation",
+    "Integration patterns with AWS CloudTrail, IAM, and Bedrock Guardrails"
+  ]
+}
