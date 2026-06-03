@@ -35,6 +35,9 @@ Agents communicate exclusively through a shared LangGraph state object. The supe
 | Canada AIDA | Canada | Proposed legislation |
 | Australia AI Ethics | Australia | Voluntary ethics principles |
 | ISO 42001 | International | AI management system standard |
+| AWS Agentic AI Governance | Global (AWS) | Agentic AI governance (May 2026) |
+| Microsoft ACS | Global (Open Standard) | Runtime agent control (June 2026) |
+| OpenAI Frontier Governance | Global (OpenAI) | Frontier model safety (May 2026) |
 
 ## Data Sources
 
@@ -45,6 +48,9 @@ Agents communicate exclusively through a shared LangGraph state object. The supe
 - Canada AIDA: https://www.parl.ca/legisinfo/en/bill/44-1/c-27
 - Australia AI Ethics: https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-framework
 - ISO 42001: https://www.iso.org/standard/81230.html
+- AWS Agentic AI Governance: https://aws.amazon.com/blogs/publicsector/a-governance-framework-for-building-trustworthy-agentic-ai-for-public-sector-and-regulated-organizations/
+- Microsoft ACS: https://devblogs.microsoft.com/foundry/build-2026-open-trust-stack-ai-agents
+- OpenAI Frontier Governance: https://openai.com/index/openai-frontier-governance-framework/
 
 ## Supported Industries
 
