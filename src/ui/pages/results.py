@@ -34,6 +34,14 @@ def _generate_advice_direct(
             "next_agent": "",
             "messages": [],
         }
+        import os
+        config = {}
+        if os.environ.get('LANGCHAIN_TRACING_V2') == 'true':
+            try:
+                from langchain_core.tracers import LangChainTracer
+                config = {'callbacks': [LangChainTracer(project_name=os.environ.get('LANGCHAIN_PROJECT', 'ai-governance-helper'))]}
+            except Exception:
+                pass
         result = graph.invoke(initial_state, config=config)
         return result.get("final_advice")
     except Exception as e:
