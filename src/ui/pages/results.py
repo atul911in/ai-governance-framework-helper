@@ -1,4 +1,5 @@
-"""Results display page for the AI Governance Framework Helper."""
+"""Results display page for the AI Governance Framework Helper.
+Generates compliance advice using the multi-agent LangGraph workflow."""
 
 import streamlit as st
 
